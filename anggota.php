@@ -130,7 +130,7 @@ include "koneksi.php";
           <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
           <li class="nav-item"><a class="nav-link active" href="anggota.php">Anggota</a></li>
           <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="kegiatan.php">Kegiatan</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
           <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
         </ul>
