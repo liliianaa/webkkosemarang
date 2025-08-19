@@ -20,20 +20,7 @@ include "koneksi.php";
       background: linear-gradient(180deg, #fde8e9 0%, #fff 100%);
       position: relative;
       padding-top: 100px;
-      padding-bottom: 100px;
-    }
-
-    /* Elemen bulat dekorasi */
-    .circle {
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle at 30% 30%, #f77d6b, #e5443c);
-      border-radius: 50%;
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 0;
+      padding-bottom: 220px;
     }
 
     .tagline {

@@ -16,7 +16,7 @@
         #hero {
             background: linear-gradient(180deg, #fde8e9 0%, #fff 100%);
             position: relative;
-            padding-top: 100px;
+            padding-top: 50px;
             padding-bottom: 100px;
         }
 
@@ -446,9 +446,10 @@
             <!-- Kontak -->
             <div class="col-md-3 mb-4">
                 <h6 class="fw-bold mb-3">Kontak</h6>
-                <p class="mb-1 text-white-50">Email: info@kkopaud-semarang.id</p>
-                <p class="mb-1 text-white-50">Telepon: (024) 123-4567</p>
-                <p class="mb-0 text-white-50">Alamat: Semarang, Jawa Tengah</p>
+                <p class="mb-1 text-white-50">Email: kkopaudkotasemarang@gmail.com</p>
+                <p class="mb-1 text-white-50">Telepon: 0816661087/08976622262</p>
+                <p class="mb-0 text-white-50">Alamat: Jl. Graha Mukti Utama No. 344b Tlogomulyo, Pedurungan, Kota
+                    Semarang</p>
             </div>
         </div>
 
