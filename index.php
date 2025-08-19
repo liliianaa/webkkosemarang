@@ -105,7 +105,7 @@ include "koneksi.php";
                     <li class="nav-item"><a class="nav-link active" href="index.php">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="anggota.php">Anggota</a></li>
                     <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kegiatan.php">Kegiatan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
                 </ul>
@@ -254,7 +254,7 @@ include "koneksi.php";
                         <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> Aula Dinas Pendidikan Kota
                             Semarang</p>
                         <p class="mb-3 text-muted"><i class="bi bi-people me-1"></i> 150/200 peserta</p>
-                        <a href="#" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
+                        <a href="kegiatan.php" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
@@ -272,7 +272,7 @@ include "koneksi.php";
                         <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1"></i> 20 Januari 2025</p>
                         <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> Online via Zoom</p>
                         <p class="mb-3 text-muted"><i class="bi bi-people me-1"></i> 320/500 peserta</p>
-                        <a href="#" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
+                        <a href="kegiatan.php" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
@@ -291,7 +291,7 @@ include "koneksi.php";
                         <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> Desa Karanganyar, Kab. Semarang
                         </p>
                         <p class="mb-3 text-muted"><i class="bi bi-people me-1"></i> 45/60 peserta</p>
-                        <a href="#" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
+                        <a href="kegiatan.php" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
                                 class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
