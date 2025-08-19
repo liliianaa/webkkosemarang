@@ -131,7 +131,7 @@ include "koneksi.php";
           <li class="nav-item"><a class="nav-link active" href="anggota.php">Anggota</a></li>
           <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
           <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
           <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
         </ul>
       </div>
@@ -257,58 +257,58 @@ include "koneksi.php";
     </p>
     <div class="row g-4">
 
-    <?php
-    // Data anggota disimpan di array
-    $anggota = [
-      [
-        "nama" => "Dewi Sartika, S.Pd",
-        "pengalaman" => 8,
-        "institusi" => "TK Harapan Bangsa",
-        "wilayah" => "Semarang Tengah",
-        "spesialisasi" => "Pembelajaran Kreatif"
-      ],
-      [
-        "nama" => "Budi Santoso, S.Pd",
-        "pengalaman" => 6,
-        "institusi" => "KB Ceria",
-        "wilayah" => "Semarang Utara",
-        "spesialisasi" => "Manajemen PAUD"
-      ],
-      [
-        "nama" => "Ani Wijayanti, M.Pd",
-        "pengalaman" => 12,
-        "institusi" => "TK Permata Hati",
-        "wilayah" => "Semarang Selatan",
-        "spesialisasi" => "Kurikulum Merdeka"
-      ]
-    ];
+      <?php
+      // Data anggota disimpan di array
+      $anggota = [
+        [
+          "nama" => "Dewi Sartika, S.Pd",
+          "pengalaman" => 8,
+          "institusi" => "TK Harapan Bangsa",
+          "wilayah" => "Semarang Tengah",
+          "spesialisasi" => "Pembelajaran Kreatif"
+        ],
+        [
+          "nama" => "Budi Santoso, S.Pd",
+          "pengalaman" => 6,
+          "institusi" => "KB Ceria",
+          "wilayah" => "Semarang Utara",
+          "spesialisasi" => "Manajemen PAUD"
+        ],
+        [
+          "nama" => "Ani Wijayanti, M.Pd",
+          "pengalaman" => 12,
+          "institusi" => "TK Permata Hati",
+          "wilayah" => "Semarang Selatan",
+          "spesialisasi" => "Kurikulum Merdeka"
+        ]
+      ];
 
-    // Loop data anggota
-    foreach ($anggota as $row) {
-    ?>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 text-start p-4">
-          <div class="icon-circle mx-auto mb-3 text-center">
-            <i class="bi bi-book" style="font-size:2rem; color:white;"></i>
+      // Loop data anggota
+      foreach ($anggota as $row) {
+        ?>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 rounded-4 text-start p-4">
+            <div class="icon-circle mx-auto mb-3 text-center">
+              <i class="bi bi-book" style="font-size:2rem; color:white;"></i>
+            </div>
+            <h5 class="fw-bold text-center"><?= htmlspecialchars($row['nama']) ?></h5>
+            <span class="badge-center">
+              <?= htmlspecialchars($row['pengalaman']) ?> tahun pengalaman
+            </span>
+            <p class="mb-1"><i class="bi bi-journal-bookmark text-danger"></i>
+              <strong>Institusi:</strong> <?= htmlspecialchars($row['institusi']) ?>
+            </p>
+            <p class="mb-1"><i class="bi bi-geo-alt text-danger"></i>
+              <strong>Wilayah:</strong> <?= htmlspecialchars($row['wilayah']) ?>
+            </p>
+            <p><i class="bi bi-award text-danger"></i>
+              <strong>Spesialisasi:</strong> <?= htmlspecialchars($row['spesialisasi']) ?>
+            </p>
           </div>
-          <h5 class="fw-bold text-center"><?= htmlspecialchars($row['nama']) ?></h5>
-          <span class="badge-center">
-            <?= htmlspecialchars($row['pengalaman']) ?> tahun pengalaman
-          </span>
-          <p class="mb-1"><i class="bi bi-journal-bookmark text-danger"></i> 
-            <strong>Institusi:</strong> <?= htmlspecialchars($row['institusi']) ?>
-          </p>
-          <p class="mb-1"><i class="bi bi-geo-alt text-danger"></i> 
-            <strong>Wilayah:</strong> <?= htmlspecialchars($row['wilayah']) ?>
-          </p>
-          <p><i class="bi bi-award text-danger"></i> 
-            <strong>Spesialisasi:</strong> <?= htmlspecialchars($row['spesialisasi']) ?>
-          </p>
         </div>
-      </div>
-    <?php
-    }
-    ?>
+        <?php
+      }
+      ?>
 
     </div>
   </div>

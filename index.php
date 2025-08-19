@@ -106,7 +106,7 @@ include "koneksi.php";
                     <li class="nav-item"><a class="nav-link" href="anggota.php">Anggota</a></li>
                     <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
                 </ul>
             </div>
@@ -146,10 +146,12 @@ include "koneksi.php";
             <div class="col-md-6">
                 <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
                     <h5 class="fw-bold mb-3"><i class="bi bi-eye-fill text-danger me-2"></i>Visi Kami</h5>
-                    <p class="text-muted">
-                        Menjadi organisasi kolaborasi profesional PAUD terdepan di Indonesia yang mampu menghasilkan
-                        generasi emas melalui pendidikan anak usia dini yang berkualitas, inovatif, dan berkelanjutan.
-                    </p>
+                    <ul class="text-muted ps-3">
+                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Mewujudkan Kelompok Kerja
+                            Operator PAUD yang Handal, Solid</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Berkualitas dalam
+                            Pengelolaan Administrasi Sekolah yang Berbasis IPTEK</li>
+                    </ul>
                 </div>
             </div>
 
@@ -158,12 +160,18 @@ include "koneksi.php";
                 <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
                     <h5 class="fw-bold mb-3"><i class="bi bi-bullseye text-danger me-2"></i>Misi Kami</h5>
                     <ul class="text-muted ps-3">
-                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Meningkatkan kompetensi
-                            operator PAUD melalui pelatihan berkelanjutan</li>
-                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Mendorong digitalisasi dan
-                            inovasi dalam pengelolaan PAUD</li>
-                        <li><i class="bi bi-check-circle text-danger me-2"></i>Membangun kolaborasi strategis dengan
-                            berbagai institusi</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Meningkatkan Profesionalisme
+                            SDM Operator Sekolah Dalam Bidang TIK</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Membangun Jaringan
+                            Komunikasi dan Informasi</li>
+                        <li><i class="bi bi-check-circle text-danger me-2"></i>Menjamin Mitra Kerja Dengan Pemangku
+                            Kepentingan</li>
+                        <li><i class="bi bi-check-circle text-danger me-2"></i>Penyampaian Informasi Secara Cepat,
+                            Tepat, AKurat, dan Dapat Dipercaya</li>
+                        <li><i class="bi bi-check-circle text-danger me-2"></i>Meningkatkan Validitas data dan
+                            persaudaraan Dalam Bekerja, Baik, Jujur, Amanah, dan Solidaritas</li>
+                        <li><i class="bi bi-check-circle text-danger me-2"></i>Mewujudkan Satu Nusa Satu Bangsa Satu
+                            Bahasa dan Satu Data yang Berkualitas</li>
                     </ul>
                 </div>
             </div>
@@ -325,10 +333,10 @@ include "koneksi.php";
             <div class="col-md-3 mb-4">
                 <h6 class="fw-bold mb-3">Halaman</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Anggota</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Program</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Kegiatan</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Kontak</a></li>
+                    <li><a href="anggota.php" class="text-white-50 text-decoration-none">Anggota</a></li>
+                    <li><a href="program.php" class="text-white-50 text-decoration-none">Program</a></li>
+                    <li><a href="kegiatas" class="text-white-50 text-decoration-none">Kegiatan</a></li>
+                    <li><a href="kontak.php" class="text-white-50 text-decoration-none">Kontak</a></li>
                 </ul>
             </div>
 
