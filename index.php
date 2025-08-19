@@ -107,7 +107,7 @@ include "koneksi.php";
                     <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php" target="_blank">Login</a></li>
                 </ul>
             </div>
         </div>
