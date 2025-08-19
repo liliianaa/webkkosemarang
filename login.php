@@ -69,14 +69,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     a.back-link:hover {
       text-decoration: underline;
     }
+    .logo-img {
+      width: 100px;  
+      height: auto;  
+      border-radius: 50%; 
+    }
   </style>
 </head>
 <body>
   <div class="container d-flex align-items-center justify-content-center vh-100">
     <div class="card login-card p-4">
       <div class="text-center">
-        <div class="logo-box mb-3">
-          <i class="bi bi-book"></i>
+        <div class="logo mb-3">
+          <img src="assets/img/logo.jpg" alt="Logo" class="logo-img">
         </div>
         <h5 class="fw-bold mb-1">KKO PAUD Semarang</h5>
         <h6 class="fw-semibold">Admin Login</h6>

@@ -191,7 +191,7 @@
 
                 <!-- Kolom Kanan (Gambar) -->
                 <div class="col-md-6 text-center">
-                    <img src="assets/gambarkontak.jpg" alt="Anak-anak belajar" class="img-fluid rounded-4 shadow-sm"
+                    <img src="assets/img/gambarkontak.jpg" alt="Anak-anak belajar" class="img-fluid rounded-4 shadow-sm"
                         style="max-width: 100%; height: auto;">
                 </div>
             </div>

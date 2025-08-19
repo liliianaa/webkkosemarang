@@ -193,7 +193,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/g1.png" class="card-img-top rounded-top-4" alt="Workshop">
+          <img src="assets/img/g1.png" class="card-img-top rounded-top-4" alt="Workshop">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Gratis</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -217,7 +217,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/g2.png" class="card-img-top rounded-top-4" alt="Webinar">
+          <img src="assets/img/g2.png" class="card-img-top rounded-top-4" alt="Webinar">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Gratis</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -241,7 +241,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/g3.png" class="card-img-top rounded-top-4" alt="Bakti Sosial">
+          <img src="assets/img/g3.png" class="card-img-top rounded-top-4" alt="Bakti Sosial">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Gratis</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -265,7 +265,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Bakti Sosial">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Bakti Sosial">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Rp 150.000</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -291,7 +291,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Bakti Sosial">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Bakti Sosial">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Rp 75.000</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -317,7 +317,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Bakti Sosial">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Bakti Sosial">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Gratis</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -356,7 +356,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Rp 150.000</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -381,7 +381,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Pelatihan">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Pelatihan">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Rp 75.000</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -406,7 +406,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Launching">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Launching">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Gratis</span>
           <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">Mendatang</span>
         </div>
@@ -444,7 +444,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Penghargaan</span>
         </div>
         <div class="card-body">
@@ -467,7 +467,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Kerjasama</span>
         </div>
         <div class="card-body">
@@ -490,7 +490,7 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <img src="assets/img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
           <span class="badge bg-danger position-absolute top-0 start-0 m-2">Program Sosial</span>
         </div>
         <div class="card-body">
