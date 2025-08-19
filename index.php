@@ -104,8 +104,8 @@ include "koneksi.php";
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.php">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="anggota.php">Anggota</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
                     <li class="nav-item"><a class="nav-link" href="kegiatan.php">Kegiatan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="legalitas.php">Legalitas</a></li>
                     <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php" target="_blank">Login</a></li>
                 </ul>
@@ -334,8 +334,8 @@ include "koneksi.php";
                 <h6 class="fw-bold mb-3">Halaman</h6>
                 <ul class="list-unstyled">
                     <li><a href="anggota.php" class="text-white-50 text-decoration-none">Anggota</a></li>
-                    <li><a href="program.php" class="text-white-50 text-decoration-none">Program</a></li>
-                    <li><a href="kegiatas" class="text-white-50 text-decoration-none">Kegiatan</a></li>
+                    <li><a href="kegiatan.php" class="text-white-50 text-decoration-none">Kegiatan</a></li>
+                    <li><a href="legalitas.php" class="text-white-50 text-decoration-none">Legalitas</a></li>
                     <li><a href="kontak.php" class="text-white-50 text-decoration-none">Kontak</a></li>
                 </ul>
             </div>

@@ -128,11 +128,11 @@ include "koneksi.php";
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link active" href="anggota.php">Anggota</a></li>
-          <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-          <li class="nav-item"><a class="nav-link" href="kegiatan.php">Kegiatan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+          <li class="nav-item"><a class="nav-link" href="anggota.php">Anggota</a></li>
+          <li class="nav-item"><a class="nav-link active" href="kegiatan.php">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="legalitas.php">Legalitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php" target="_blank">Login</a></li>
         </ul>
       </div>
     </div>
@@ -159,7 +159,7 @@ include "koneksi.php";
 </html>
 
 <!-- button -->
- <div class="container my-4">
+<div class="container my-4">
   <div class="d-flex flex-wrap gap-2 justify-content-center">
     <button class="btn btn-danger fw-semibold rounded-3 px-3">
       Semua Kegiatan (6)
@@ -186,9 +186,9 @@ include "koneksi.php";
 </div>
 
 <!-- card -->
- <div class="container my-5">
+<div class="container my-5">
   <div class="row justify-content-center g-4">
-    
+
     <!-- Card 1 -->
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
@@ -203,7 +203,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-clock"></i> 09:00 - 15:00 WIB</p>
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Aula Dinas Pendidikan Kota Semarang</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 150/200 peserta</p>
-          <p class="card-text">Workshop intensif tentang implementasi Kurikulum Merdeka untuk pendidik PAUD se-Kota Semarang dengan fokus pada pembelajaran yang berpusat pada anak.</p>
+          <p class="card-text">Workshop intensif tentang implementasi Kurikulum Merdeka untuk pendidik PAUD se-Kota
+            Semarang dengan fokus pada pembelajaran yang berpusat pada anak.</p>
         </div>
         <div class="card-footer bg-white border-0 d-flex justify-content-between">
           <a href="#" class="btn btn-danger w-75"><i class="bi bi-eye"></i> Detail</a>
@@ -226,7 +227,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-clock"></i> 19:00 - 21:00 WIB</p>
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Online via Zoom</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 320/500 peserta</p>
-          <p class="card-text">Webinar tentang penggunaan teknologi untuk efisiensi administrasi lembaga PAUD, termasuk sistem informasi manajemen dan pelaporan digital.</p>
+          <p class="card-text">Webinar tentang penggunaan teknologi untuk efisiensi administrasi lembaga PAUD, termasuk
+            sistem informasi manajemen dan pelaporan digital.</p>
         </div>
         <div class="card-footer bg-white border-0 d-flex justify-content-between">
           <a href="#" class="btn btn-danger w-75"><i class="bi bi-eye"></i> Detail</a>
@@ -249,7 +251,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-clock"></i> 07:00 - 17:00 WIB</p>
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Desa Karanganyar, Kab. Semarang</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 45/60 peserta</p>
-          <p class="card-text">Kegiatan bakti sosial memberikan bantuan pendidikan, alat peraga edukatif, dan pelatihan parenting untuk masyarakat desa terpencil.</p>
+          <p class="card-text">Kegiatan bakti sosial memberikan bantuan pendidikan, alat peraga edukatif, dan pelatihan
+            parenting untuk masyarakat desa terpencil.</p>
         </div>
         <div class="card-footer bg-white border-0 d-flex justify-content-between">
           <a href="#" class="btn btn-danger w-75"><i class="bi bi-eye"></i> Detail</a>
@@ -273,7 +276,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Hotel Santika Semarang</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 89/300 peserta</p>
           <p class="card-text">
-            Seminar nasional dengan tema 'Inovasi Pembelajaran PAUD di Era Digital' menghadirkan pakar pendidikan anak usia dini terkemuka dari seluruh Indonesia.
+            Seminar nasional dengan tema 'Inovasi Pembelajaran PAUD di Era Digital' menghadirkan pakar pendidikan anak
+            usia dini terkemuka dari seluruh Indonesia.
           </p>
         </div>
         <div class="card-footer bg-white border-0 d-flex justify-content-between">
@@ -298,8 +302,9 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Gedung KKO PAUD Semarang</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 67/80 peserta</p>
           <p class="card-text">
-            Pelatihan komprehensif tentang teknik asesmen autentik dalam pembelajaran PAUD, termasuk pengembangan instrumen dan analisis hasil asesmen.
-        </p>
+            Pelatihan komprehensif tentang teknik asesmen autentik dalam pembelajaran PAUD, termasuk pengembangan
+            instrumen dan analisis hasil asesmen.
+          </p>
         </div>
         <div class="card-footer bg-white border-0 d-flex justify-content-between">
           <a href="#" class="btn btn-danger w-75"><i class="bi bi-eye"></i> Detail</a>
@@ -323,8 +328,9 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Hybrid: Offline & Online</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 234/400 peserta</p>
           <p class="card-text">
-            Peluncuran resmi platform digital KKO PAUD yang akan memudahkan administrasi dan manajemen lembaga PAUD di Kota Semarang
-        </p>
+            Peluncuran resmi platform digital KKO PAUD yang akan memudahkan administrasi dan manajemen lembaga PAUD di
+            Kota Semarang
+          </p>
         </div>
         <div class="card-footer bg-white border-0 d-flex justify-content-between">
           <a href="#" class="btn btn-danger w-75"><i class="bi bi-eye"></i> Detail</a>
@@ -360,7 +366,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-clock"></i> 09:00 - 16:00 WIB</p>
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Gedung KKO PAUD Semarang</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 67/80 peserta</p>
-          <p class="card-text">Seminar nasional yang membahas inovasi terbaru dalam pendidikan anak usia dini dengan pembicara ahli dari berbagai universitas terkemuka.</p>
+          <p class="card-text">Seminar nasional yang membahas inovasi terbaru dalam pendidikan anak usia dini dengan
+            pembicara ahli dari berbagai universitas terkemuka.</p>
         </div>
         <div class="card-footer bg-white border-0">
           <a href="#" class="btn btn-outline-secondary w-100">
@@ -384,7 +391,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-clock"></i> 09:00 - 16:00 WIB</p>
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Gedung KKO PAUD Semarang</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 67/80 peserta</p>
-          <p class="card-text">Pelatihan komprehensif tentang teknik asesmen yang efektif untuk mengukur perkembangan anak usia dini.</p>
+          <p class="card-text">Pelatihan komprehensif tentang teknik asesmen yang efektif untuk mengukur perkembangan
+            anak usia dini.</p>
         </div>
         <div class="card-footer bg-white border-0">
           <a href="#" class="btn btn-outline-secondary w-100">
@@ -408,7 +416,8 @@ include "koneksi.php";
           <p class="mb-1 text-muted"><i class="bi bi-clock"></i> 10:00 - 12:00 WIB</p>
           <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> Hybrid: Offline & Online</p>
           <p class="mb-2 text-muted"><i class="bi bi-people"></i> 234/400 peserta</p>
-          <p class="card-text">Peluncuran resmi platform digital KKO PAUD yang akan memudahkan kolaborasi dan administrasi operator PAUD.</p>
+          <p class="card-text">Peluncuran resmi platform digital KKO PAUD yang akan memudahkan kolaborasi dan
+            administrasi operator PAUD.</p>
         </div>
         <div class="card-footer bg-white border-0">
           <a href="#" class="btn btn-outline-secondary w-100">
@@ -435,15 +444,16 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-            <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Penghargaan</span>
+          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Penghargaan</span>
         </div>
         <div class="card-body">
-            <h5 class="fw-bold">KKO PAUD Semarang Raih Penghargaan Inovasi Pendidikan 2024</h5>
-            <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> 10 Januari 2025</p>
-            <p class="card-text">
-                KKO PAUD Kota Semarang berhasil meraih penghargaan Inovasi Pendidikan Terbaik dari Kementerian Pendidikan untuk kategori Kolaborasi Profesional PAUD.
-            </p>
+          <h5 class="fw-bold">KKO PAUD Semarang Raih Penghargaan Inovasi Pendidikan 2024</h5>
+          <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> 10 Januari 2025</p>
+          <p class="card-text">
+            KKO PAUD Kota Semarang berhasil meraih penghargaan Inovasi Pendidikan Terbaik dari Kementerian Pendidikan
+            untuk kategori Kolaborasi Profesional PAUD.
+          </p>
         </div>
         <div class="card-footer bg-white border-0">
           <a href="#" class="btn btn-outline-secondary w-100">
@@ -457,15 +467,16 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-            <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Kerjasama</span>
+          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Kerjasama</span>
         </div>
         <div class="card-body">
-            <h5 class="fw-bold">Kerjasama dengan 5 Universitas untuk Program Penelitian PAUD</h5>
-            <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> 5 Januari 2025</p>
-            <p class="card-text">
-                KKO PAUD menandatangani MoU dengan lima universitas terkemuka untuk mengembangkan program penelitian dan pengembangan PAUD yang berkelanjutan
-            </p>
+          <h5 class="fw-bold">Kerjasama dengan 5 Universitas untuk Program Penelitian PAUD</h5>
+          <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> 5 Januari 2025</p>
+          <p class="card-text">
+            KKO PAUD menandatangani MoU dengan lima universitas terkemuka untuk mengembangkan program penelitian dan
+            pengembangan PAUD yang berkelanjutan
+          </p>
         </div>
         <div class="card-footer bg-white border-0">
           <a href="#" class="btn btn-outline-secondary w-100">
@@ -479,15 +490,16 @@ include "koneksi.php";
     <div class="col-md-4">
       <div class="card shadow-sm rounded-4 h-100">
         <div class="position-relative">
-            <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Program Sosial</span>
+          <img src="img/contoh.jpeg" class="card-img-top rounded-top-4" alt="Seminar">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">Program Sosial</span>
         </div>
         <div class="card-body">
-            <h5 class="fw-bold">Program Beasiswa PAUD untuk 100 Anak Kurang Mampu</h5>
-            <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> 28 Desember 2024</p>
-            <p class="card-text">
-                KKO PAUD meluncurkan program beasiswa pendidikan untuk 100 anak dari keluarga kurang mampu di Kota Semarang sebagai bentuk kepedulian sosial.
-            </p>
+          <h5 class="fw-bold">Program Beasiswa PAUD untuk 100 Anak Kurang Mampu</h5>
+          <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> 28 Desember 2024</p>
+          <p class="card-text">
+            KKO PAUD meluncurkan program beasiswa pendidikan untuk 100 anak dari keluarga kurang mampu di Kota Semarang
+            sebagai bentuk kepedulian sosial.
+          </p>
         </div>
         <div class="card-footer bg-white border-0">
           <a href="#" class="btn btn-outline-secondary w-100">
@@ -501,65 +513,64 @@ include "koneksi.php";
   </div>
 </div>
 
-<!-- footer -->
 <footer class="bg-dark text-white pt-5 pb-3">
-    <div class="container">
-        <div class="row">
-            <!-- Logo & Deskripsi -->
-            <div class="col-md-3 mb-4">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="bg-danger text-white rounded-circle p-2 me-2 d-flex justify-content-center align-items-center"
-                        style="width: 40px; height: 40px;">
-                        <i class="bi bi-book"></i>
-                    </div>
-                    <div>
-                        <h5 class="mb-0 fw-bold">KKO PAUD</h5>
-                        <small class="text-white-50">Kota Semarang</small>
-                    </div>
-                </div>
-                <p class="text-white-50 small">
-                    Kolaborasi profesional untuk kemajuan PAUD di Kota Semarang
-                </p>
-            </div>
-
-            <!-- Halaman -->
-            <div class="col-md-3 mb-4">
-                <h6 class="fw-bold mb-3">Halaman</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Anggota</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Program</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Kegiatan</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Kontak</a></li>
-                </ul>
-            </div>
-
-            <!-- Layanan -->
-            <div class="col-md-3 mb-4">
-                <h6 class="fw-bold mb-3">Layanan</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Konsultasi PAUD</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Sertifikasi</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Konten Edukatif</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Platform Digital</a></li>
-                </ul>
-            </div>
-
-            <!-- Kontak -->
-            <div class="col-md-3 mb-4">
-                <h6 class="fw-bold mb-3">Kontak</h6>
-                <p class="mb-1 text-white-50">Email: info@kkopaud-semarang.id</p>
-                <p class="mb-1 text-white-50">Telepon: (024) 123-4567</p>
-                <p class="mb-0 text-white-50">Alamat: Semarang, Jawa Tengah</p>
-            </div>
+  <div class="container">
+    <div class="row">
+      <!-- Logo & Deskripsi -->
+      <div class="col-md-3 mb-4">
+        <div class="d-flex align-items-center mb-2">
+          <div class="bg-danger text-white rounded-circle p-2 me-2 d-flex justify-content-center align-items-center"
+            style="width: 40px; height: 40px;">
+            <i class="bi bi-book"></i>
+          </div>
+          <div>
+            <h5 class="mb-0 fw-bold">KKO PAUD</h5>
+            <small class="text-white-50">Kota Semarang</small>
+          </div>
         </div>
+        <p class="text-white-50 small">
+          Kolaborasi profesional untuk kemajuan PAUD di Kota Semarang
+        </p>
+      </div>
 
-        <hr class="border-secondary">
+      <!-- Halaman -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Halaman</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.php" class="text-white-50 text-decoration-none">Beranda</a></li>
+          <li><a href="anggota.php" class="text-white-50 text-decoration-none">Anggota</a></li>
+          <li><a href="legalitas.php" class="text-white-50 text-decoration-none">Legalitas</a></li>
+          <li><a href="kontak.php" class="text-white-50 text-decoration-none">Kontak</a></li>
+        </ul>
+      </div>
 
-        <!-- Copyright -->
-        <div class="text-center small text-white-50">
-            © 2025 KKO PAUD Kota Semarang. Semua hak dilindungi.
-        </div>
+      <!-- Layanan -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Layanan</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50 text-decoration-none">Konsultasi PAUD</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Sertifikasi</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Konten Edukatif</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Platform Digital</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Kontak</h6>
+        <p class="mb-1 text-white-50">Email: info@kkopaud-semarang.id</p>
+        <p class="mb-1 text-white-50">Telepon: (024) 123-4567</p>
+        <p class="mb-0 text-white-50">Alamat: Semarang, Jawa Tengah</p>
+      </div>
     </div>
+
+    <hr class="border-secondary">
+
+    <!-- Copyright -->
+    <div class="text-center small text-white-50">
+      © 2025 KKO PAUD Kota Semarang. Semua hak dilindungi.
+    </div>
+  </div>
 </footer>
 
 <!-- Bootstrap Icons -->

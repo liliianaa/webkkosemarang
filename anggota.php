@@ -130,8 +130,9 @@ include "koneksi.php";
           <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
           <li class="nav-item"><a class="nav-link active" href="anggota.php">Anggota</a></li>
           <li class="nav-item"><a class="nav-link" href="kegiatan.php">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="legalitas.php">Legalitas</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php" target="_blank">Login</a></li>
         </ul>
       </div>
     </div>
@@ -312,6 +313,66 @@ include "koneksi.php";
     </div>
   </div>
 </section>
+
+<footer class="bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row">
+      <!-- Logo & Deskripsi -->
+      <div class="col-md-3 mb-4">
+        <div class="d-flex align-items-center mb-2">
+          <div class="bg-danger text-white rounded-circle p-2 me-2 d-flex justify-content-center align-items-center"
+            style="width: 40px; height: 40px;">
+            <i class="bi bi-book"></i>
+          </div>
+          <div>
+            <h5 class="mb-0 fw-bold">KKO PAUD</h5>
+            <small class="text-white-50">Kota Semarang</small>
+          </div>
+        </div>
+        <p class="text-white-50 small">
+          Kolaborasi profesional untuk kemajuan PAUD di Kota Semarang
+        </p>
+      </div>
+
+      <!-- Halaman -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Halaman</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.php" class="text-white-50 text-decoration-none">Beranda</a></li>
+          <li><a href="kegiatan.php" class="text-white-50 text-decoration-none">Kegiatan</a></li>
+          <li><a href="legalitas.php" class="text-white-50 text-decoration-none">Legalitas</a></li>
+          <li><a href="kontak.php" class="text-white-50 text-decoration-none">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Layanan -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Layanan</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white-50 text-decoration-none">Konsultasi PAUD</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Sertifikasi</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Konten Edukatif</a></li>
+          <li><a href="#" class="text-white-50 text-decoration-none">Platform Digital</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Kontak</h6>
+        <p class="mb-1 text-white-50">Email: info@kkopaud-semarang.id</p>
+        <p class="mb-1 text-white-50">Telepon: (024) 123-4567</p>
+        <p class="mb-0 text-white-50">Alamat: Semarang, Jawa Tengah</p>
+      </div>
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Copyright -->
+    <div class="text-center small text-white-50">
+      © 2025 KKO PAUD Kota Semarang. Semua hak dilindungi.
+    </div>
+  </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
