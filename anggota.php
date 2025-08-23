@@ -100,6 +100,20 @@ include "koneksi.php";
       /* warna text-danger */
       white-space: nowrap;
     }
+
+    .pengurus-card {
+      transition: all 0.3s ease;
+      background-color: #fff;
+    }
+
+    .pengurus-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .rounded-circle {
+      border: 3px solid #f8f9fa;
+    }
   </style>
 </head>
 
@@ -148,7 +162,7 @@ include "koneksi.php";
 </html>
 
 <!-- PENGURUS -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center fw-bold mb-2">Pengurus KKO PAUD</h2>
     <p class="text-center text-muted mb-5">
@@ -156,150 +170,48 @@ include "koneksi.php";
     </p>
     <div class="row g-4">
 
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 text-start p-4">
-          <div class="icon-circle mx-auto mb-3 text-center">
-            <i class="bi bi-people" style="font-size:2rem; color:white;"></i>
-          </div>
-          <h5 class="fw-bold text-center">Dr. Siti Nurhaliza, M.Pd</h5>
-          <span class="badge-center">
-            Ketua KKO PAUD
-          </span>
-          <p class="mb-1"><i class="bi bi-calendar-event text-danger"></i> <strong>Pengalaman:</strong> 15 tahun</p>
-          <p><i class="bi bi-award text-danger"></i> <strong>Keahlian:</strong> Kurikulum PAUD, Manajemen Pendidikan</p>
-          <p class="mb-1"><i class="bi bi-envelope text-danger"></i> <a
-              href="mailto:ketua@kkopaud-semarang.id">ketua@kkopaud-semarang.id</a></p>
-          <p><i class="bi bi-telephone text-danger"></i> +62 812-1111-1111</p>
-          <hr>
-          <p class="fw-bold">Pencapaian:</p>
-          <ul class="small">
-            <li>Doktor Pendidikan PAUD</li>
-            <li>Penulis 5 Buku PAUD</li>
-            <li>Pembicara Nasional</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 text-start p-4">
-          <div class="icon-circle mx-auto mb-3 text-center">
-            <i class="bi bi-people" style="font-size:2rem; color:white;"></i>
-          </div>
-          <h5 class="fw-bold text-center">Ahmad Fauzi, S.Pd</h5>
-          <span class="badge-center">
-            Wakil Ketua KKO PAUD
-          </span>
-          <p class="mb-1"><i class="bi bi-calendar-event text-danger"></i> <strong>Pengalaman:</strong> 12 tahun</p>
-          <p><i class="bi bi-award text-danger"></i> <strong>Keahlian:</strong> Digitalisasi PAUD, Pelatihan</p>
-          <p class="mb-1"><i class="bi bi-envelope text-danger"></i> <a
-              href="mailto:wakil@kkopaud-semarang.id">wakil@kkopaud-semarang.id</a></p>
-          <p><i class="bi bi-telephone text-danger"></i> +62 812-2222-2222</p>
-          <hr>
-          <p class="fw-bold">Pencapaian:</p>
-          <ul class="small">
-            <li>Ahli Teknologi Pendidikan</li>
-            <li>Developer Platform PAUD</li>
-            <li>Trainer Bersertifikat</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 rounded-4 text-start p-4">
-          <div class="icon-circle mx-auto mb-3 text-center">
-            <i class="bi bi-people" style="font-size:2rem; color:white;"></i>
-          </div>
-          <h5 class="fw-bold text-center">Rina Kartika, M.Psi</h5>
-          <span class="badge-center">
-            Koordinator Kegiatan Sosial
-          </span>
-          <p class="mb-1"><i class="bi bi-calendar-event text-danger"></i> <strong>Pengalaman:</strong> 10 tahun</p>
-          <p><i class="bi bi-award text-danger"></i> <strong>Keahlian:</strong> Psikologi Anak, Community Outreach</p>
-          <p class="mb-1"><i class="bi bi-envelope text-danger"></i> <a
-              href="mailto:sosial@kkopaud-semarang.id">sosial@kkopaud-semarang.id</a></p>
-          <p><i class="bi bi-telephone text-danger"></i> +62 812-3333-3333</p>
-          <hr>
-          <p class="fw-bold">Pencapaian:</p>
-          <ul class="small">
-            <li>Magister Psikologi</li>
-            <li>Konselor Anak</li>
-            <li>Aktivis Sosial</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SECTION ANGGOTA AKTIF -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-2">Anggota Aktif</h2>
-    <p class="text-center text-muted mb-5">
-      Operator PAUD yang aktif berpartisipasi dalam kegiatan KKO
-    </p>
-    <div class="row g-4">
-
       <?php
-      // Data anggota disimpan di array
-      $anggota = [
-        [
-          "nama" => "Dewi Sartika, S.Pd",
-          "pengalaman" => 8,
-          "institusi" => "TK Harapan Bangsa",
-          "wilayah" => "Semarang Tengah",
-          "spesialisasi" => "Pembelajaran Kreatif"
-        ],
-        [
-          "nama" => "Budi Santoso, S.Pd",
-          "pengalaman" => 6,
-          "institusi" => "KB Ceria",
-          "wilayah" => "Semarang Utara",
-          "spesialisasi" => "Manajemen PAUD"
-        ],
-        [
-          "nama" => "Ani Wijayanti, M.Pd",
-          "pengalaman" => 12,
-          "institusi" => "TK Permata Hati",
-          "wilayah" => "Semarang Selatan",
-          "spesialisasi" => "Kurikulum Merdeka"
-        ]
-      ];
+      include "koneksi.php";
+      $sql = "SELECT * FROM pengurus ORDER BY id ASC";
+      $result = $conn->query($sql);
 
-      // Loop data anggota
-      foreach ($anggota as $row) {
+      while ($row = $result->fetch_assoc()) {
+        $foto = $row['foto'];
+        $fotoPath = "assets/foto_pengurus/" . $foto;
         ?>
         <div class="col-md-4">
-          <div class="card h-100 shadow-sm border-0 rounded-4 text-start p-4">
-            <div class="icon-circle mx-auto mb-3 text-center">
-              <i class="bi bi-book" style="font-size:2rem; color:white;"></i>
-            </div>
-            <h5 class="fw-bold text-center"><?= htmlspecialchars($row['nama']) ?></h5>
-            <span class="badge-center">
-              <?= htmlspecialchars($row['pengalaman']) ?> tahun pengalaman
+          <div class="card pengurus-card h-100 shadow-sm border-0 rounded-4 text-center p-4 transition-card">
+            <!-- Foto Pengurus -->
+            <?php if (!empty($foto) && file_exists($fotoPath)): ?>
+              <div class="text-center mb-3">
+                <img src="<?= $fotoPath ?>" alt="<?= $row['nama'] ?>" class="rounded-circle shadow mb-2 mx-auto d-block"
+                  style="width: 100px; height: 100px; object-fit: cover;">
+              </div>
+            <?php else: ?>
+              <div class="icon-circle text-center mx-auto mb-3">
+                <i class="bi bi-person" style="font-size: 2rem; color: white;"></i>
+              </div>
+            <?php endif; ?>
+
+
+            <h5 class="fw-bold"><?= htmlspecialchars($row['nama']) ?></h5>
+            <span class="badge badge-center bg-danger-subtle text-danger mb-2 px-3 py-1 rounded-pill">
+              <?= htmlspecialchars($row['jabatan']) ?>
             </span>
-            <p class="mb-1"><i class="bi bi-journal-bookmark text-danger"></i>
-              <strong>Institusi:</strong> <?= htmlspecialchars($row['institusi']) ?>
-            </p>
-            <p class="mb-1"><i class="bi bi-geo-alt text-danger"></i>
-              <strong>Wilayah:</strong> <?= htmlspecialchars($row['wilayah']) ?>
-            </p>
-            <p><i class="bi bi-award text-danger"></i>
-              <strong>Spesialisasi:</strong> <?= htmlspecialchars($row['spesialisasi']) ?>
+
+            <p class="mb-0 mt-3">
+              <i class="bi bi-mortarboard-fill text-danger me-1"></i>
+              <strong>Pendidikan:</strong> <?= htmlspecialchars($row['pendidikan_terakhir']) ?>
             </p>
           </div>
         </div>
-        <?php
-      }
-      ?>
+      <?php } ?>
 
     </div>
   </div>
 </section>
+
+
 
 <footer class="bg-dark text-white pt-5 pb-3">
   <div class="container">
