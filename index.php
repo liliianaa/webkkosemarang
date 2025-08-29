@@ -17,10 +17,10 @@ include "koneksi.php";
 
         /* Background lembut */
         #hero {
-            background: linear-gradient(180deg, #fde8e9 0%, #fff 100%);
             position: relative;
-            padding-top: 200px;
-            padding-bottom: 220px;
+            height: 100vh;       /* full tinggi layar */
+            margin: 0;
+            padding: 0;          /* hapus padding */
         }
 
         .tagline {
@@ -75,6 +75,14 @@ include "koneksi.php";
             color: #f44336 !important;
             font-weight: bold;
         }
+
+        .text-shadow {
+            text-shadow: 3px 3px 12px rgba(0,0,0,0.9);
+        }
+        #hero {
+            height: 100vh;
+        }
+        
     </style>
 </head>
 
@@ -100,19 +108,67 @@ include "koneksi.php";
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section id="hero" class="text-center">
-        <div class="circle"></div>
-        <div class="container position-relative" style="z-index:1;">
-            <span class="tagline">Komunitas PAUD</span>
-            <h1 class="hero-title">KKO PAUD</h1>
-            <h1 class="hero-subtitle">Kota Semarang</h1>
-            <p class="hero-desc">
+    <!-- HERO DENGAN SLIDESHOW BACKGROUND -->
+    <section id="hero" class="text-center position-relative overflow-hidden">
+
+        <!-- Carousel Background -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/gambarkontak.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/g2.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide2">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/g3.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide3">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/g4.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide4">
+                </div>
+            </div>
+
+            <!-- Indicator bulatan -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            </div>
+        </div>
+
+        <!-- Overlay konten -->
+        <div class="container position-absolute top-50 start-50 translate-middle text-white text-center animate__animated animate__fadeInUp"
+            style="z-index:2;">
+            <span class="tagline bg-danger-subtle text-danger px-3 py-1 rounded-pill">Komunitas PAUD</span>
+            <h1 class="hero-title display-4 fw-bold text-shadow mb-1"
+                style="color:#fff; text-shadow: 3px 3px 12px rgba(0,0,0,0.9);">
+                KKO PAUD
+            </h1>
+            <h1 class="hero-subtitle display-4 fw-bold text-shadow mb-3"
+                style="text-shadow: 3px 3px 12px rgba(0,0,0,0.9);">
+                Kota Semarang
+            </h1>
+            <p class="hero-desc mt-3 p-3 rounded-3"
+                style="color:#fff; text-shadow: 2px 2px 8px rgba(66, 66, 66, 0.3); max-width:700px; margin:auto;">
                 Wadah kolaborasi profesional operator PAUD yang berfokus pada peningkatan mutu pendidikan anak usia dini
                 melalui pelatihan, digitalisasi, dan kegiatan sosial.
             </p>
+            <div class="mt-4">
+                <a href="anggota.php" class="btn btn-danger btn-lg me-2 shadow">Bergabung Sekarang</a>
+                <a href="kegiatan.php" class="btn btn-outline-light btn-lg shadow">Lihat Kegiatan</a>
+            </div>
         </div>
+
+        <!-- Overlay gradien -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+            style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)); z-index:1;"></div>
     </section>
+
+<!-- Tambahkan animate.css untuk animasi -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
@@ -173,45 +229,46 @@ include "koneksi.php";
     <div class="container text-center">
         <h2 class="fw-bold mb-2">Kepemimpinan KKO PAUD</h2>
         <p class="text-muted mb-5">
-            Tim kepemimpinan yang berpengalaman dan berdedikasi
+            Tim kepemimpinan inti yang berpengalaman dan berdedikasi
         </p>
 
         <div class="row g-4">
-            <!-- Ketua -->
-            <div class="col-md-6">
-                <div class="p-4 h-100 shadow-sm rounded-4 bg-white">
-                    <div class="mb-3">
-                        <div class="mx-auto rounded-circle d-flex align-items-center justify-content-center"
-                            style="width:80px;height:80px;background: linear-gradient(135deg,#f77d6b,#e5443c);">
-                            <i class="bi bi-people-fill text-white fs-2"></i>
-                        </div>
-                    </div>
-                    <h5 class="fw-bold mb-1">Dr. Siti Nurhaliza, M.Pd</h5>
-                    <span class="badge bg-danger-subtle text-danger mb-3">Ketua KKO PAUD</span>
-                    <p class="mb-1"><strong>Pengalaman:</strong> 15 tahun</p>
-                    <p class="mb-3"><strong>Keahlian:</strong> Kurikulum PAUD, Manajemen Pendidikan</p>
-                    <a href="#" class="text-danger fw-semibold">Lihat Semua Anggota <i
-                            class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
+            <?php
+            // Ambil hanya Pembina, Ketua Umum, dan Ketua Harian
+            $sql = "SELECT * FROM pengurus WHERE jabatan IN ('Pembina','Ketua Umum','Ketua Harian') ORDER BY FIELD(jabatan,'Pembina','Ketua Umum','Ketua Harian')";
+            $result = $conn->query($sql);
 
-            <!-- Wakil Ketua -->
-            <div class="col-md-6">
-                <div class="p-4 h-100 shadow-sm rounded-4 bg-white">
-                    <div class="mb-3">
-                        <div class="mx-auto rounded-circle d-flex align-items-center justify-content-center"
-                            style="width:80px;height:80px;background: linear-gradient(135deg,#f77d6b,#e5443c);">
-                            <i class="bi bi-people-fill text-white fs-2"></i>
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    // Jika ada foto, gunakan. Kalau tidak, pakai ikon default
+                    $foto = (!empty($row['foto']) && file_exists("assets/foto_anggota/".$row['foto']))
+                            ? "assets/foto_anggota/".$row['foto']
+                            : "https://via.placeholder.com/150x150?text=Foto";
+
+                    ?>
+                    <div class="col-md-4">
+                        <div class="p-4 h-100 shadow-sm rounded-4 bg-white">
+                            <div class="mb-3">
+                                <img src="<?= $foto ?>" alt="<?= $row['nama'] ?>"
+                                    class="rounded-circle mb-3"
+                                    style="width:100px;height:100px;object-fit:cover;">
+                            </div>
+                            <h5 class="fw-bold mb-1"><?= $row['nama'] ?></h5>
+                            <span class="badge bg-danger-subtle text-danger mb-3"><?= $row['jabatan'] ?></span>
+                            <?php if (!empty($row['pengalaman'])): ?>
+                                <p class="mb-1"><strong>Pengalaman:</strong> <?= $row['pengalaman'] ?></p>
+                            <?php endif; ?>
+                            <?php if (!empty($row['keahlian'])): ?>
+                                <p class="mb-3"><strong>Keahlian:</strong> <?= $row['keahlian'] ?></p>
+                            <?php endif; ?>
                         </div>
                     </div>
-                    <h5 class="fw-bold mb-1">Ahmad Fauzi, S.Pd</h5>
-                    <span class="badge bg-danger-subtle text-danger mb-3">Wakil Ketua KKO PAUD</span>
-                    <p class="mb-1"><strong>Pengalaman:</strong> 12 tahun</p>
-                    <p class="mb-3"><strong>Keahlian:</strong> Digitalisasi PAUD, Pelatihan</p>
-                    <a href="#" class="text-danger fw-semibold">Lihat Semua Anggota <i
-                            class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
+                    <?php
+                }
+            } else {
+                echo "<p class='text-muted'>Data kepemimpinan belum tersedia.</p>";
+            }
+            ?>
         </div>
     </div>
 </section>
@@ -223,9 +280,7 @@ include "koneksi.php";
     <style>
         #activities .card-img-top {
             height: 200px;
-            /* tinggi seragam */
             object-fit: cover;
-            /* crop proporsional */
         }
     </style>
 
@@ -236,61 +291,49 @@ include "koneksi.php";
         </div>
 
         <div class="row g-4">
-            <!-- Kegiatan 1 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
-                    <div class="position-relative">
-                        <img src="assets/gambar1.jpeg" class="card-img-top" alt="Workshop Kurikulum">
-                        <span class="badge bg-success position-absolute top-0 end-0 m-3">Berlangsung</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="fw-bold">Workshop Kurikulum Merdeka PAUD</h5>
-                        <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1"></i> 15 Januari 2025</p>
-                        <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> Aula Dinas Pendidikan Kota
-                            Semarang</p>
-                        <p class="mb-3 text-muted"><i class="bi bi-people me-1"></i> 150/200 peserta</p>
-                        <a href="kegiatan.php" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+            // Query: ambil 3 kegiatan terbaru
+            $sql = "SELECT * FROM kegiatan ORDER BY tanggal DESC LIMIT 3";
+            $result = $conn->query($sql);
 
-            <!-- Kegiatan 2 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
-                    <div class="position-relative">
-                        <img src="assets/g2.jpg" class="card-img-top" alt="Webinar Digital">
-                        <span class="badge bg-primary position-absolute top-0 end-0 m-3">Mendatang</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="fw-bold">Webinar Teknologi Pembelajaran Digital</h5>
-                        <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1"></i> 20 Januari 2025</p>
-                        <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> Online via Zoom</p>
-                        <p class="mb-3 text-muted"><i class="bi bi-people me-1"></i> 320/500 peserta</p>
-                        <a href="kegiatan.php" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $fotoList = !empty($row['foto']) ? explode(",", $row['foto']) : [];
+                    $fotoUtama = (!empty($fotoList[0]) && file_exists("assets/foto_kegiatan/" . $fotoList[0]))
+                                  ? "assets/foto_kegiatan/" . $fotoList[0]
+                                  : "assets/img/contoh.jpeg";
 
-            <!-- Kegiatan 3 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
-                    <div class="position-relative">
-                        <img src="assets/g3.jpg" class="card-img-top" alt="Bakti Sosial Pendidikan">
-                        <span class="badge bg-primary position-absolute top-0 end-0 m-3">Mendatang</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="fw-bold">Bakti Sosial Pendidikan Desa Terpencil</h5>
-                        <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1"></i> 25 Januari 2025</p>
-                        <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> Desa Karanganyar, Kab. Semarang
-                        </p>
-                        <p class="mb-3 text-muted"><i class="bi bi-people me-1"></i> 45/60 peserta</p>
-                        <a href="kegiatan.php" class="text-danger fw-semibold">Lihat Semua Kegiatan <i
-                                class="bi bi-arrow-right"></i></a>
+                    $tgl = date("d M Y", strtotime($row['tanggal']));
+                    $jam = date("H:i", strtotime($row['jam']));
+            ?>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                        <div class="position-relative">
+                            <img src="<?= $fotoUtama ?>" class="card-img-top" alt="<?= $row['nama_kegiatan'] ?>">
+                            <span class="badge <?= (strtotime($row['tanggal']) >= time()) ? 'bg-primary' : 'bg-success' ?> position-absolute top-0 end-0 m-3">
+                                <?= (strtotime($row['tanggal']) >= time()) ? 'Mendatang' : 'Selesai' ?>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold"><?= $row['nama_kegiatan'] ?></h5>
+                            <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1"></i> <?= $tgl ?>, <?= $jam ?> WIB</p>
+                            <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> <?= $row['tempat'] ?></p>
+                            <p class="mb-3 text-muted"><?= substr($row['deskripsi'], 0, 100) ?>...</p>
+                            <a href="detail_kegiatan.php?id=<?= $row['id'] ?>" class="text-danger fw-semibold">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php
+                }
+            } else {
+                echo "<p class='text-center text-muted'>Belum ada kegiatan.</p>";
+            }
+            ?>
+        </div>
+
+        <!-- Tombol ke semua kegiatan -->
+        <div class="text-center mt-4">
+            <a href="kegiatan.php" class="btn btn-outline-danger">Lihat Semua Kegiatan</a>
         </div>
     </div>
 </section>

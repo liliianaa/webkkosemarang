@@ -2,6 +2,9 @@
 include "koneksi.php";
 include "upload_foto.php";
 
+// Tangkap halaman saat ini
+$hlm = isset($_GET['hlm']) ? (int) $_GET['hlm'] : 1;
+
 // ==== TAMBAH & EDIT ====
 if (isset($_POST['simpan'])) {
     $nama = $_POST['nama'];
@@ -39,7 +42,7 @@ if (isset($_POST['simpan'])) {
     }
 
     $stmt->execute();
-    echo "<script>alert('Data berhasil disimpan');window.location='admin.php?page=anggota_data';</script>";
+    echo "<script>alert('Data berhasil disimpan');window.location='admin.php?page=anggota_data&hlm=$hlm';</script>";
 }
 
 // ==== HAPUS ====
@@ -54,9 +57,10 @@ if (isset($_POST['hapus'])) {
     $stmt->bind_param("i", $id);
     $stmt->execute();
 
-    echo "<script>alert('Data berhasil dihapus');window.location='admin.php?page=anggota';</script>";
+    echo "<script>alert('Data berhasil dihapus');window.location='admin.php?page=anggota_data&hlm=$hlm';</script>";
 }
 ?>
+
 
 <div class="container">
     <!-- Tombol Tambah -->
@@ -128,13 +132,13 @@ if (isset($_POST['hapus'])) {
                                                 </div>
                                                 <div class="mb-3">
                                                     <label>Jabatan</label>
-                                                    <textarea class="form-control" name="jabatan"
-                                                        required><?= $row["jabatan"] ?></textarea>
+                                                    <input type="text" name="jabatan" class="form-control"
+                                                        value="<?= $row["jabatan"] ?>" required>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label>Pendidikan Terakhir</label>
-                                                    <textarea class="form-control" name="pendidikan_terakhir"
-                                                        required><?= $row["pendidikan_terakhir"] ?></textarea>
+                                                    <input type="text" name="pendidikan_terakhir" class="form-control"
+                                                        value="<?= $row["pendidikan_terakhir"] ?>" required>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label>Ganti Foto</label>
