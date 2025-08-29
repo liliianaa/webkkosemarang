@@ -151,7 +151,6 @@ include "koneksi.php";
       </p>
       <div class="mt-4">
         <a href="#" class="btn btn-join"><i class="bi bi-person-plus"></i> Bergabung dengan Kami</a>
-        <a href="#" class="btn btn-program"><i class="bi bi-book"></i> Lihat Program Kami</a>
       </div>
     </div>
   </section>

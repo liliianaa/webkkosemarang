@@ -133,7 +133,7 @@ include "koneksi.php";
       <h1 class="hero-title">Kegiatan</h1>
       <h1 class="hero-subtitle">KKO PAUD Kota Semarang</h1>
       <p class="hero-desc">
-        Ikuti berbagai kegiatan menarik dan dapatkan informasi terbaru seputar perkembangan KKO PAUD Kota Semarang.
+        Ikuti berbagai kegiatan menarik dan dapata informasi terbaru seputar perkembangan KKO Paud Kota Semarang.
       </p>
   </section>
 </body>
@@ -142,7 +142,7 @@ include "koneksi.php";
 <div class="container my-5">
   <div class="row g-4 justify-content-center">
     <?php
-    $sql = "SELECT * FROM kegiatan ORDER BY tanggal DESC";
+    $sql = "SELECT * FROM kegiatan ORDER BY tanggal ASC";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
@@ -170,9 +170,9 @@ include "koneksi.php";
             </div>
             <div class="card-body">
               <h5 class="card-title fw-bold"><?= $row['nama_kegiatan'] ?></h5>
-              <p class="mb-1 text-muted"><i class="bi bi-calendar-event"></i> <?= $tgl ?></p>
-              <p class="mb-1 text-muted"><i class="bi bi-clock"></i> <?= $jam ?> WIB</p>
-              <p class="mb-1 text-muted"><i class="bi bi-geo-alt"></i> <?= $row['tempat'] ?></p>
+              <p class="mb-1 text-muted"><i class="bi bi-calendar-event text-danger"></i> <?= $tgl ?></p>
+              <p class="mb-1 text-muted"><i class="bi bi-clock text-danger"></i> <?= $jam ?> WIB</p>
+              <p class="mb-1 text-muted"><i class="bi bi-geo-alt text-danger"></i> <?= $row['tempat'] ?></p>
               <p class="card-text"><?= substr($row['deskripsi'],0,120) ?>...</p>
             </div>
             <div class="card-footer bg-white border-0 d-flex justify-content-between">

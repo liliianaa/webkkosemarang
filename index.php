@@ -18,9 +18,11 @@ include "koneksi.php";
         /* Background lembut */
         #hero {
             position: relative;
-            height: 100vh;       /* full tinggi layar */
+            height: 100vh;
+            /* full tinggi layar */
             margin: 0;
-            padding: 0;          /* hapus padding */
+            padding: 0;
+            /* hapus padding */
         }
 
         .tagline {
@@ -77,12 +79,12 @@ include "koneksi.php";
         }
 
         .text-shadow {
-            text-shadow: 3px 3px 12px rgba(0,0,0,0.9);
+            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
         }
+
         #hero {
             height: 100vh;
         }
-        
     </style>
 </head>
 
@@ -115,16 +117,20 @@ include "koneksi.php";
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/gambarkontak.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide1">
+                    <img src="assets/img/gambarkontak.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;"
+                        alt="slide1">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/g2.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide2">
+                    <img src="assets/img/g2.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;"
+                        alt="slide2">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/g3.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide3">
+                    <img src="assets/img/g3.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;"
+                        alt="slide3">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/g4.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;" alt="slide4">
+                    <img src="assets/img/g4.jpg" class="d-block w-100" style="height:100vh; object-fit:cover;"
+                        alt="slide4">
                 </div>
             </div>
 
@@ -165,8 +171,8 @@ include "koneksi.php";
             style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)); z-index:1;"></div>
     </section>
 
-<!-- Tambahkan animate.css untuk animasi -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Tambahkan animate.css untuk animasi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
 
@@ -188,12 +194,18 @@ include "koneksi.php";
             <!-- Visi -->
             <div class="col-md-6">
                 <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-eye-fill text-danger me-2"></i>Visi Kami</h5>
-                    <ul class="text-muted ps-3">
-                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Mewujudkan Kelompok Kerja
-                            Operator PAUD yang Handal, Solid</li>
-                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Berkualitas dalam
-                            Pengelolaan Administrasi Sekolah yang Berbasis IPTEK</li>
+                    <h5 class="fw-bold mb-3 text-center">
+                        <i class="bi bi-eye-fill text-danger me-2"></i>Visi Kami
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Mewujudkan Kelompok Kerja Operator PAUD yang Handal, Solid</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Berkualitas dalam Pengelolaan Administrasi Sekolah yang Berbasis IPTEK</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -201,28 +213,43 @@ include "koneksi.php";
             <!-- Misi -->
             <div class="col-md-6">
                 <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-bullseye text-danger me-2"></i>Misi Kami</h5>
-                    <ul class="text-muted ps-3">
-                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Meningkatkan Profesionalisme
-                            SDM Operator Sekolah Dalam Bidang TIK</li>
-                        <li class="mb-2"><i class="bi bi-check-circle text-danger me-2"></i>Membangun Jaringan
-                            Komunikasi dan Informasi</li>
-                        <li><i class="bi bi-check-circle text-danger me-2"></i>Menjamin Mitra Kerja Dengan Pemangku
-                            Kepentingan</li>
-                        <li><i class="bi bi-check-circle text-danger me-2"></i>Penyampaian Informasi Secara Cepat,
-                            Tepat, AKurat, dan Dapat Dipercaya</li>
-                        <li><i class="bi bi-check-circle text-danger me-2"></i>Meningkatkan Validitas data dan
-                            persaudaraan Dalam Bekerja, Baik, Jujur, Amanah, dan Solidaritas</li>
-                        <li><i class="bi bi-check-circle text-danger me-2"></i>Mewujudkan Satu Nusa Satu Bangsa Satu
-                            Bahasa dan Satu Data yang Berkualitas</li>
+                    <h5 class="fw-bold mb-3 text-center">
+                        <i class="bi bi-bullseye text-danger me-2"></i>Misi Kami
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Meningkatkan Profesionalisme SDM Operator Sekolah Dalam Bidang TIK</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Membangun Jaringan Komunikasi dan Informasi</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Menjamin Mitra Kerja Dengan Pemangku Kepentingan</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Penyampaian Informasi Secara Cepat, Tepat, Akurat, dan Dapat Dipercaya</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Meningkatkan Validitas data dan persaudaraan Dalam Bekerja, Baik, Jujur, Amanah, dan
+                                Solidaritas</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Mewujudkan Satu Nusa Satu Bangsa Satu Bahasa dan Satu Data yang Berkualitas</span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <!-- VISI MISI END -->
+
 
 <!-- KETUA KKO START -->
 <section id="leadership" class="py-5 bg-light">
@@ -241,16 +268,15 @@ include "koneksi.php";
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     // Jika ada foto, gunakan. Kalau tidak, pakai ikon default
-                    $foto = (!empty($row['foto']) && file_exists("assets/foto_anggota/".$row['foto']))
-                            ? "assets/foto_anggota/".$row['foto']
-                            : "https://via.placeholder.com/150x150?text=Foto";
+                    $foto = (!empty($row['foto']) && file_exists("assets/foto_pengurus/" . $row['foto']))
+                        ? "assets/foto_pengurus/" . $row['foto']
+                        : "https://via.placeholder.com/150x150?text=Foto";
 
                     ?>
                     <div class="col-md-4">
                         <div class="p-4 h-100 shadow-sm rounded-4 bg-white">
                             <div class="mb-3">
-                                <img src="<?= $foto ?>" alt="<?= $row['nama'] ?>"
-                                    class="rounded-circle mb-3"
+                                <img src="<?= $foto ?>" alt="<?= $row['nama'] ?>" class="rounded-circle mb-3"
                                     style="width:100px;height:100px;object-fit:cover;">
                             </div>
                             <h5 class="fw-bold mb-1"><?= $row['nama'] ?></h5>
@@ -293,37 +319,41 @@ include "koneksi.php";
         <div class="row g-4">
             <?php
             // Query: ambil 3 kegiatan terbaru
-            $sql = "SELECT * FROM kegiatan ORDER BY tanggal DESC LIMIT 3";
+            $sql = "SELECT * FROM kegiatan ORDER BY tanggal ASC LIMIT 3";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $fotoList = !empty($row['foto']) ? explode(",", $row['foto']) : [];
                     $fotoUtama = (!empty($fotoList[0]) && file_exists("assets/foto_kegiatan/" . $fotoList[0]))
-                                  ? "assets/foto_kegiatan/" . $fotoList[0]
-                                  : "assets/img/contoh.jpeg";
+                        ? "assets/foto_kegiatan/" . $fotoList[0]
+                        : "assets/img/contoh.jpeg";
 
                     $tgl = date("d M Y", strtotime($row['tanggal']));
                     $jam = date("H:i", strtotime($row['jam']));
-            ?>
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
-                        <div class="position-relative">
-                            <img src="<?= $fotoUtama ?>" class="card-img-top" alt="<?= $row['nama_kegiatan'] ?>">
-                            <span class="badge <?= (strtotime($row['tanggal']) >= time()) ? 'bg-primary' : 'bg-success' ?> position-absolute top-0 end-0 m-3">
-                                <?= (strtotime($row['tanggal']) >= time()) ? 'Mendatang' : 'Selesai' ?>
-                            </span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold"><?= $row['nama_kegiatan'] ?></h5>
-                            <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1"></i> <?= $tgl ?>, <?= $jam ?> WIB</p>
-                            <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1"></i> <?= $row['tempat'] ?></p>
-                            <p class="mb-3 text-muted"><?= substr($row['deskripsi'], 0, 100) ?>...</p>
-                            <a href="detail_kegiatan.php?id=<?= $row['id'] ?>" class="text-danger fw-semibold">Lihat Detail <i class="bi bi-arrow-right"></i></a>
+                    ?>
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm rounded-4 overflow-hidden">
+                            <div class="position-relative">
+                                <img src="<?= $fotoUtama ?>" class="card-img-top" alt="<?= $row['nama_kegiatan'] ?>">
+                                <span
+                                    class="badge <?= (strtotime($row['tanggal']) >= time()) ? 'bg-primary' : 'bg-success' ?> position-absolute top-0 end-0 m-3">
+                                    <?= (strtotime($row['tanggal']) >= time()) ? 'Mendatang' : 'Selesai' ?>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="fw-bold"><?= $row['nama_kegiatan'] ?></h5>
+                                <p class="mb-1 text-muted"><i class="bi bi-calendar-event me-1 text-danger"></i> <?= $tgl ?></p>
+                                <p class="mb-1 text-muted"><i class="bi bi-clock text-danger"></i> <?= $jam ?> WIB</p>
+                                <p class="mb-1 text-muted"><i class="bi bi-geo-alt me-1 text-danger"></i> <?= $row['tempat'] ?>
+                                </p>
+                                <p class="mb-3 text-muted"><?= substr($row['deskripsi'], 0, 100) ?>...</p>
+                                <a href="detail_kegiatan.php?id=<?= $row['id'] ?>" class="text-danger fw-semibold">Lihat Detail
+                                    <i class="bi bi-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php
+                    <?php
                 }
             } else {
                 echo "<p class='text-center text-muted'>Belum ada kegiatan.</p>";
