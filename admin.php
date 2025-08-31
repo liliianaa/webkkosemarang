@@ -41,6 +41,11 @@ if (!isset($_SESSION['username'])) {
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?= (isset($_GET['page']) && $_GET['page']=="anggota") ? 'active fw-semibold text-primary' : '' ?>" href="admin.php?page=daftar_data">
+                        <i class="bi bi-person-fill"></i> Anggota
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?= (isset($_GET['page']) && $_GET['page']=="kegiatan") ? 'active fw-semibold text-primary' : '' ?>" href="admin.php?page=kegiatan_data">
                         <i class="bi bi-calendar-event"></i> Kegiatan
                     </a>

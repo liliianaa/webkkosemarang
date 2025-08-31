@@ -3,6 +3,10 @@
 $q1 = $conn->query("SELECT COUNT(*) as total FROM pengurus");
 $jumlah_pengurus = $q1->fetch_assoc()['total'];
 
+// jumlah pendaftar (anggota)
+$q4 = $conn->query("SELECT COUNT(*) as total FROM anggota");
+$jumlah_pendaftar = $q4->fetch_assoc()['total'];
+
 // jumlah kegiatan bulan ini
 $q2 = $conn->query("SELECT COUNT(*) as total FROM kegiatan WHERE MONTH(tanggal)=MONTH(CURRENT_DATE())");
 $jumlah_kegiatan = $q2->fetch_assoc()['total'];
@@ -27,6 +31,20 @@ $jumlah_user = $q3->fetch_assoc()['total'];
           </div>
           <div class="rounded-circle bg-primary bg-opacity-10 p-3">
             <i class="bi bi-people-fill text-primary fs-2"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div>
+            <p class="text-muted mb-1">Total pendaftar</p>
+            <h3 class="fw-bold"><?= $jumlah_pendaftar ?></h3>
+          </div>
+          <div class="rounded-circle bg-primary bg-opacity-10 p-3">
+            <i class="bi bi-person-fill text-primary fs-2"></i>
           </div>
         </div>
       </div>
@@ -69,6 +87,9 @@ $jumlah_user = $q3->fetch_assoc()['total'];
       <div class="list-group">
         <a href="admin.php?page=anggota_data" class="list-group-item list-group-item-action">
           <i class="bi bi-people-fill text-danger me-2"></i> Kelola Pengurus
+        </a>
+        <a href="admin.php?page=daftar_data" class="list-group-item list-group-item-action">
+          <i class="bi bi-person-fill text-danger me-2"></i> Kelola Anggota
         </a>
         <a href="admin.php?page=kegiatan_data" class="list-group-item list-group-item-action">
           <i class="bi bi-calendar-event text-danger me-2"></i> Kelola Kegiatan
