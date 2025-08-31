@@ -108,7 +108,7 @@ if (isset($_POST['hapus'])) {
                 $limit_start = ($hlm - 1) * $limit;
                 $no = $limit_start + 1;
 
-                $sql = "SELECT * FROM kegiatan ORDER BY id DESC LIMIT $limit_start, $limit";
+                $sql = "SELECT * FROM kegiatan ORDER BY tanggal ASC LIMIT $limit_start, $limit";
                 $hasil = $conn->query($sql);
 
                 while ($row = $hasil->fetch_assoc()) {
