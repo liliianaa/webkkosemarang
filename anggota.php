@@ -54,21 +54,45 @@ include "koneksi.php";
       color: #444;
     }
 
+    /* Tombol Bergabung */
     .btn-join {
       background-color: #f44336;
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
       font-weight: 500;
+      transition: all 0.3s ease;
     }
 
-    .btn-program {
+    .btn-join:hover {
       background-color: white;
-      border: 1px solid #ccc;
+      color: #f44336;
+      border: 2px solid #f44336;
+      border-radius: 8px;
+      box-shadow: 0 6px 15px rgba(244, 67, 54, 0.4);
+      transform: translateY(-3px) scale(1.05);
+      /* bergerak naik + membesar */
+    }
+
+
+    /* Tombol Cek Status */
+    .btn-program-danger {
+      background-color: white;
+      border: 2px solid #f44336;
+      color: #f44336;
       padding: 10px 20px;
       border-radius: 8px;
       font-weight: 500;
       margin-left: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-program-danger:hover {
+      background-color: #f44336;
+      color: white;
+      box-shadow: 0 6px 15px rgba(244, 67, 54, 0.4);
+      transform: translateY(-3px) scale(1.05);
+      /* bergerak naik + membesar */
     }
 
     .navbar .nav-link.active {
@@ -150,8 +174,10 @@ include "koneksi.php";
         Profesional berpengalaman yang berkomitmen memajukan pendidikan anak usia dini di Kota Semarang
       </p>
       <div class="mt-4">
-        <a href="formulirpendaftaran.php" class="btn btn-join"><i class="bi bi-person-plus"></i> Bergabung dengan Kami</a>
-        <a href="#" class="btn btn-program"><i class="bi bi-book"></i> Lihat Program Kami</a>
+        <a href="formpendaftaran.php" class="btn btn-join"><i class="bi bi-person-plus"></i> Bergabung dengan
+          Kami</a>
+        <a href="cek_status.php" class="btn btn-program-danger"><i class="bi bi-check-circle"></i> Cek Status
+          Pendaftaran </a>
       </div>
     </div>
   </section>

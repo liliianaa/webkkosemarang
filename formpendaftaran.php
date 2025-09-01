@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Proses simpan jika tombol daftar ditekan
+// Proses simpan
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama          = $_POST['nama'];
     $tempat_lahir  = $_POST['tempat_lahir'];
@@ -26,9 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nama', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$alamat', '$no_hp', '$email')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<div style='padding:15px; background:#d4edda; color:#155724; text-align:center;'>Pendaftaran berhasil disimpan!</div>";
+        echo "<div class='alert alert-success text-center'>✅ Pendaftaran berhasil disimpan!</div>";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "<div class='alert alert-danger text-center'>❌ Error: " . $conn->error . "</div>";
     }
 }
 ?>
@@ -39,34 +39,69 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8">
   <title>Form Pendaftaran</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(180deg, #fde8e9 0%, #fff 100%);
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.8s ease;
+    }
+    .card-header {
+      background: #f44336;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .btn-danger {
+      border-radius: 12px;
+      font-weight: bold;
+      transition: 0.3s;
+      background: #f44336;
+    }
+    .btn-danger:hover {
+      transform: scale(1.05);
+      background: #f44336;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
-<body class="bg-light">
+<body>
 
-<div class="container mt-5">
-  <div class="card shadow mx-auto" style="max-width: 600px;">
-    <div class="card-header bg-danger text-white text-center">
-      <h5>Formulir Pendaftaran Anggota KKO PAUD Kota Semarang</h5>
+<div class="container">
+  <div class="card mx-auto" style="max-width: 600px;">
+    <div class="card-header text-white text-center py-3 fw-bold">
+      <h5 class="mb-0" style="font-weight: bold;">📋 Formulir Pendaftaran Anggota</h5>
+      <small>KKO PAUD Kota Semarang</small>
     </div>
-    <div class="card-body">
+    <div class="card-body p-4">
       <form method="POST" action="">
         <div class="mb-3">
-          <label>Nama Lengkap</label>
+          <label class="form-label">Nama Lengkap</label>
           <input type="text" name="nama" class="form-control" required>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label>Tempat Lahir</label>
+            <label class="form-label">Tempat Lahir</label>
             <input type="text" name="tempat_lahir" class="form-control" required>
           </div>
           <div class="col-md-6 mb-3">
-            <label>Tanggal Lahir</label>
+            <label class="form-label">Tanggal Lahir</label>
             <input type="date" name="tanggal_lahir" class="form-control" required>
           </div>
         </div>
 
         <div class="mb-3">
-          <label>Jenis Kelamin</label>
+          <label class="form-label">Jenis Kelamin</label>
           <select name="jenis_kelamin" class="form-select" required>
             <option value="">-- Pilih --</option>
             <option value="Laki-laki">Laki-laki</option>
@@ -75,23 +110,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="mb-3">
-          <label>Alamat</label>
+          <label class="form-label">Alamat</label>
           <textarea name="alamat" class="form-control" rows="3" required></textarea>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label>No HP</label>
+            <label class="form-label">No HP</label>
             <input type="text" name="no_hp" class="form-control" required>
           </div>
           <div class="col-md-6 mb-3">
-            <label>Email</label>
+            <label class="form-label">Email</label>
             <input type="email" name="email" class="form-control" required>
           </div>
         </div>
 
         <div class="d-grid">
-          <button type="submit" class="btn btn-danger">Daftar</button>
+          <button type="submit" class="btn btn-danger text-white">Daftar Sekarang</button>
         </div>
       </form>
     </div>
