@@ -102,7 +102,7 @@ $jumlah_user = $q3->fetch_assoc()['total'];
         <a href="admin.php?page=kegiatan_data" class="list-group-item list-group-item-action">
           <i class="bi bi-calendar-event text-danger me-2"></i> Kelola Kegiatan
         </a>
-        <a href="admin.php?page=user" class="list-group-item list-group-item-action">
+        <a href="admin.php?page=user_data" class="list-group-item list-group-item-action">
           <i class="bi bi-person-circle text-danger me-2"></i> Kelola User
         </a>
       </div>
