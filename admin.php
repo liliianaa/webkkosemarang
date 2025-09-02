@@ -56,7 +56,7 @@ if (!isset($_SESSION['username'])) {
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?= (isset($_GET['page']) && $_GET['page']=="user") ? 'active fw-semibold text-danger' : '' ?>" href="admin.php?page=user">
+                    <a class="nav-link <?= (isset($_GET['page']) && $_GET['page']=="user_data") ? 'active fw-semibold text-danger' : '' ?>" href="admin.php?page=user_data">
                         <i class="bi bi-person-circle"></i> User
                     </a>
                 </li>
