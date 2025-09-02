@@ -8,6 +8,7 @@ include "koneksi.php";
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KKO PAUD Kota Semarang</title>
+  <link rel="icon" href="assets/img/logo.jpg"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <style>
@@ -108,7 +109,9 @@ include "koneksi.php";
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-danger" href="#">KKO PAUD Semarang</a>
+      <a class="navbar-brand fw-bold text-danger d-flex align-items-center" href="#">
+        <img src="assets/img/logo.jpg" alt="Logo" width="35" height="35" class="me-2 rounded-circle">
+          KKO PAUD Kota Semarang</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -117,6 +120,7 @@ include "koneksi.php";
           <li class="nav-item"><a class="nav-link" href="index.php">Beranda</a></li>
           <li class="nav-item"><a class="nav-link" href="anggota.php">Anggota</a></li>
           <li class="nav-item"><a class="nav-link active" href="kegiatan.php">Kegiatan</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.php">Galeri</a></li>
           <li class="nav-item"><a class="nav-link" href="legalitas.php">Legalitas</a></li>
           <li class="nav-item"><a class="nav-link" href="kontak.php">Kontak</a></li>
           <li class="nav-item"><a class="nav-link" href="login.php" target="_blank">Login</a></li>
@@ -159,8 +163,9 @@ include "koneksi.php";
           <div class="card shadow-sm rounded-4 h-100">
             <div class="position-relative">
               <img src="<?= $fotoUtama ?>" class="card-img-top rounded-top-4" alt="<?= $row['nama_kegiatan'] ?>">
-              <span class="badge bg-light text-dark position-absolute top-0 end-0 m-2">
-                <?= (strtotime($row['tanggal']) >= time()) ? "Mendatang" : "Selesai" ?>
+              <span
+                class="badge <?= (strtotime($row['tanggal']) >= time()) ? 'bg-primary' : 'bg-success' ?> position-absolute top-0 end-0 m-3">
+                  <?= (strtotime($row['tanggal']) >= time()) ? 'Mendatang' : 'Selesai' ?>
               </span>
               <?php if (count($fotoList) > 1): ?>
                 <span class="badge bg-info position-absolute bottom-0 end-0 m-2">

@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <p>Gunakan Email atau nomor telepon untuk mencari status pendaftaran</p>
       <form method="POST" class="d-flex">
         <input type="text" name="keyword" class="form-control me-2"
-          placeholder="Masukkan ID pendaftaran, email, atau nomor telepon..." required>
+          placeholder="Masukkan email atau nomor telepon pendaftar" required>
         <button type="submit" class="btn btn-cari d-flex align-items-center">
           <i class="bi bi-search me-1"></i> Cari
         </button>

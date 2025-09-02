@@ -81,66 +81,108 @@ if (isset($_POST['hapus'])) {
 }
 ?>
 
-<div class="container">
-    <!-- Tombol Tambah -->
-    <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Kegiatan - KKO PAUD Kota Semarang</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS Custom Pagination Danger -->
+  <style>
+    .pagination .page-link {
+        color: #dc3545;
+    }
+    .pagination .page-link:hover {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    .pagination .page-item.active .page-link {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #fff;
+    }
+    .pagination .page-item.disabled .page-link {
+        color: #6c757d;
+        background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-danger text-white text-center">
+      <h4>Kegiatan KKO PAUD Kota Semarang</h4>
+    </div>
+    <div class="card-body">
+
+      <!-- Tombol Tambah -->
+      <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#modalTambah">
         <i class="bi bi-plus-lg"></i> Tambah Kegiatan
-    </button>
+      </button>
 
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead class="table-info">
+      <!-- Tabel Data -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-danger">
+            <tr>
+              <th>No</th>
+              <th>Nama Kegiatan</th>
+              <th>Tanggal</th>
+              <th>Jam</th>
+              <th>Tempat</th>
+              <th>Deskripsi</th>
+              <th>Foto</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $hlm = (isset($_GET['hlm'])) ? (int) $_GET['hlm'] : 1;
+            $limit = 10;
+            $limit_start = ($hlm - 1) * $limit;
+            $no = $limit_start + 1;
+
+            $sql = "SELECT * FROM kegiatan ORDER BY tanggal ASC LIMIT $limit_start, $limit";
+            $hasil = $conn->query($sql);
+
+            while ($row = $hasil->fetch_assoc()) {
+                $id = $row['id'];
+                $fotoList = explode(",", $row["foto"]);
+                ?>
                 <tr>
-                    <th>No</th>
-                    <th>Nama Kegiatan</th>
-                    <th>Tanggal</th>
-                    <th>Jam</th>
-                    <th>Tempat</th>
-                    <th>Deskripsi</th>
-                    <th>Foto</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $hlm = (isset($_GET['hlm'])) ? (int) $_GET['hlm'] : 1;
-                $limit = 10;
-                $limit_start = ($hlm - 1) * $limit;
-                $no = $limit_start + 1;
-
-                $sql = "SELECT * FROM kegiatan ORDER BY tanggal ASC LIMIT $limit_start, $limit";
-                $hasil = $conn->query($sql);
-
-                while ($row = $hasil->fetch_assoc()) {
-                    $id = $row['id'];
-                    $fotoList = explode(",", $row["foto"]);
-                    ?>
-                    <tr>
-                        <td class="text-center"><?= $no++ ?></td>
-                        <td><strong><?= $row["nama_kegiatan"] ?></strong></td>
-                        <td><?= $row["tanggal"] ?></td>
-                        <td><?= $row["jam"] ?></td>
-                        <td><?= $row["tempat"] ?></td>
-                        <td><?= substr($row["deskripsi"], 0, 50) ?>...</td>
-                        <td>
-                            <?php
-                            $fotoList = explode(",", $row["foto"]);
-                            if (!empty($row["foto"])) {
-                                echo '<img src="assets/foto_kegiatan/' . $fotoList[0] . '" width="100">';
-                                if (count($fotoList) > 1) {
-                                    echo '<span class="badge bg-info">+' . (count($fotoList)-1) . '</span>';
-                                }
-                            } else {
-                                echo '<span class="text-muted">-</span>';
-                            }
-                            ?>
-                        </td>
-
-                        <td>
-                            <a href="#" class="badge rounded-pill text-bg-success" data-bs-toggle="modal"
-                                data-bs-target="#modalEdit<?= $id ?>"><i class="bi bi-pencil"></i></a>
-                            <a href="#" class="badge rounded-pill text-bg-danger" data-bs-toggle="modal"
-                                data-bs-target="#modalHapus<?= $id ?>"><i class="bi bi-x-circle"></i></a>
+                  <td class="text-center"><?= $no++ ?></td>
+                  <td><strong><?= $row["nama_kegiatan"] ?></strong></td>
+                  <td><?= $row["tanggal"] ?></td>
+                  <td><?= $row["jam"] ?></td>
+                  <td><?= $row["tempat"] ?></td>
+                  <td><?= substr($row["deskripsi"], 0, 50) ?>...</td>
+                  <td>
+                    <?php if (!empty($row["foto"])): ?>
+                      <img src="assets/foto_kegiatan/<?= $fotoList[0] ?>" width="100">
+                      <?php if (count($fotoList) > 1): ?>
+                        <span class="badge bg-danger">+<?= count($fotoList) - 1 ?></span>
+                      <?php endif; ?>
+                    <?php else: ?>
+                      <span class="text-muted">-</span>
+                    <?php endif; ?>
+                  </td>
+                  <td>
+                    <div class="d-flex gap-1">
+                        <a href="#" title="Edit" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#modalEdit<?= $id ?>">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" title="Delete" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#modalHapus<?= $id ?>">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </div>
 
                             <!-- Modal Edit -->
                             <div class="modal fade" id="modalEdit<?= $id ?>" tabindex="-1">
@@ -202,7 +244,7 @@ if (isset($_POST['hapus'])) {
                                             </div>
                                             <div class="modal-footer">
                                                 <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                                <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                                                <input type="submit" name="simpan" value="Simpan" class="btn btn-danger">
                                             </div>
                                         </div>
                                     </form>
@@ -263,7 +305,7 @@ if (isset($_POST['hapus'])) {
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                        <input type="submit" name="simpan" value="Simpan" class="btn btn-danger">
                     </div>
                 </div>
             </form>

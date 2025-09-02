@@ -18,12 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tempat_lahir  = $_POST['tempat_lahir'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
+    $pendidikan_terakhir = $_POST['pendidikan_terakhir'];
     $alamat        = $_POST['alamat'];
     $no_hp         = $_POST['no_hp'];
     $email         = $_POST['email'];
 
-    $sql = "INSERT INTO anggota (nama, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat, no_hp, email) 
-            VALUES ('$nama', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$alamat', '$no_hp', '$email')";
+    $sql = "INSERT INTO anggota (nama, tempat_lahir, tanggal_lahir, jenis_kelamin, pendidikan_terakhir, alamat, no_hp, email) 
+            VALUES ('$nama', '$tempat_lahir', '$tanggal_lahir', '$jenis_kelamin', '$pendidikan_terakhir', '$alamat', '$no_hp', '$email')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<div class='alert alert-success text-center'>✅ Pendaftaran berhasil disimpan!</div>";
@@ -86,13 +87,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <form method="POST" action="">
         <div class="mb-3">
           <label class="form-label">Nama Lengkap</label>
-          <input type="text" name="nama" class="form-control" required>
+          <input type="text" name="nama" class="form-control" placeholder="Masukkan nama lengkap" required>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
             <label class="form-label">Tempat Lahir</label>
-            <input type="text" name="tempat_lahir" class="form-control" required>
+            <input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan tempat lahir" required>
           </div>
           <div class="col-md-6 mb-3">
             <label class="form-label">Tanggal Lahir</label>
@@ -110,18 +111,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <div class="mb-3">
+          <label class="form-label">Pendidikan Terakhir</label>
+          <input type="text" name="pendidikan_terakhir" class="form-control" placeholder="Contoh: S1 - Pendidikan PAUD" required>
+        </div>
+
+        <div class="mb-3">
           <label class="form-label">Alamat</label>
-          <textarea name="alamat" class="form-control" rows="3" required></textarea>
+          <textarea name="alamat" class="form-control" rows="3" placeholder="Masukkan alamat" required></textarea>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
             <label class="form-label">No HP</label>
-            <input type="text" name="no_hp" class="form-control" required>
+            <input type="text" name="no_hp" class="form-control" placeholder="Masukkan nomor handphone" required>
           </div>
           <div class="col-md-6 mb-3">
             <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" required>
+            <input type="email" name="email" class="form-control" placeholder="Masukkan email" required>
           </div>
         </div>
 

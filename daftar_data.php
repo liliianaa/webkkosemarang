@@ -26,7 +26,7 @@ if (isset($_GET['update_id']) && isset($_GET['status'])) {
 // filter status
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
 if ($filter == 'Semua') {
-    $sql = "SELECT * FROM anggota ORDER BY id DESC";
+    $sql = "SELECT * FROM anggota ORDER BY id ASC";
 } else {
     $sql = "SELECT * FROM anggota WHERE status='$filter' ORDER BY id DESC";
 }
@@ -38,6 +38,7 @@ $result = $conn->query($sql);
   <meta charset="UTF-8">
   <title>Dashboard Anggota - KKO PAUD Kota Semarang</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <script>
     function confirmUpdate(url, action) {
         if (confirm("Apakah Anda yakin ingin " + action + " pendaftar ini?")) {
@@ -55,7 +56,7 @@ $result = $conn->query($sql);
 <div class="container mt-5">
   <div class="card shadow">
     <div class="card-header bg-danger text-white text-center">
-      <h4>Dashboard Anggota KKO PAUD Kota Semarang</h4>
+      <h4>Anggota KKO PAUD Kota Semarang</h4>
     </div>
     <div class="card-body">
 
@@ -71,12 +72,13 @@ $result = $conn->query($sql);
       </div>
 
       <table class="table table-bordered table-striped">
-        <thead class="table-dark">
+        <thead class="table-danger">
           <tr>
             <th>No</th>
             <th>Nama Lengkap</th>
             <th>Tempat, Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
+            <th>Pendidikan Terakhir</th>
             <th>Alamat</th>
             <th>No HP</th>
             <th>Email</th>
@@ -90,20 +92,30 @@ $result = $conn->query($sql);
           $no = 1;
           while ($row = $result->fetch_assoc()) {
               echo "<tr>
-                      <td>".$no++."</td>
-                      <td>".$row['nama']."</td>
-                      <td>".$row['tempat_lahir'].", ".$row['tanggal_lahir']."</td>
-                      <td>".$row['jenis_kelamin']."</td>
-                      <td>".$row['alamat']."</td>
-                      <td>".$row['no_hp']."</td>
-                      <td>".$row['email']."</td>
-                      <td>".$row['tanggal_daftar']."</td>
-                      <td>".($row['status'] ?? 'Belum Diproses')."</td>
-                      <td>
-                          <button onclick=\"confirmUpdate('daftar_data.php?update_id=".$row['id']."&status=Diterima','menerima')\" class='btn btn-sm btn-success'>Terima</button>
-                          <button onclick=\"confirmUpdate('daftar_data.php?update_id=".$row['id']."&status=Ditolak','menolak')\" class='btn btn-sm btn-danger'>Tolak</button>
-                      </td>
-                    </tr>";
+                    <td>".$no++."</td>
+                    <td>".$row['nama']."</td>
+                    <td>".$row['tempat_lahir'].", ".$row['tanggal_lahir']."</td>
+                    <td>".$row['jenis_kelamin']."</td>
+                    <td>".$row['pendidikan_terakhir']."</td>
+                    <td>".$row['alamat']."</td>
+                    <td>".$row['no_hp']."</td>
+                    <td>".$row['email']."</td>
+                    <td>".$row['tanggal_daftar']."</td>
+                    <td>".($row['status'] ?? 'Belum Diproses')."</td>
+                    <td>
+                        <div class='d-flex gap-1'>
+                            <button onclick=\"confirmUpdate('daftar_data.php?update_id=".$row['id']."&status=Diterima','menerima')\" 
+                                    class='btn btn-outline-success btn-sm' title='Terima'>
+                                <i class='bi bi-check-circle'></i>
+                            </button>
+                            <button onclick=\"confirmUpdate('daftar_data.php?update_id=".$row['id']."&status=Ditolak','menolak')\" 
+                                    class='btn btn-outline-danger btn-sm' title='Tolak'>
+                                <i class='bi bi-x-circle'></i>
+                            </button>
+                        </div>
+                    </td>
+                  </tr>";
+
           }
           ?>
         </tbody>

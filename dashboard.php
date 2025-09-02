@@ -29,8 +29,10 @@ $jumlah_user = $q3->fetch_assoc()['total'];
             <p class="text-muted mb-1">Total Pengurus</p>
             <h3 class="fw-bold"><?= $jumlah_pengurus ?></h3>
           </div>
-          <div class="rounded-circle bg-primary bg-opacity-10 p-3">
-            <i class="bi bi-people-fill text-primary fs-2"></i>
+          <div class="d-flex align-items-center justify-content-center 
+            rounded-circle bg-primary bg-opacity-10" 
+              style="width:60px; height:60px;">
+              <i class="bi bi-people-fill text-primary fs-2"></i>
           </div>
         </div>
       </div>
@@ -43,8 +45,10 @@ $jumlah_user = $q3->fetch_assoc()['total'];
             <p class="text-muted mb-1">Total pendaftar</p>
             <h3 class="fw-bold"><?= $jumlah_pendaftar ?></h3>
           </div>
-          <div class="rounded-circle bg-primary bg-opacity-10 p-3">
-            <i class="bi bi-person-fill text-primary fs-2"></i>
+          <div class="d-flex align-items-center justify-content-center 
+            rounded-circle bg-primary bg-opacity-10" 
+              style="width:60px; height:60px;">
+              <i class="bi bi-people-fill text-primary fs-2"></i>
           </div>
         </div>
       </div>
@@ -57,7 +61,9 @@ $jumlah_user = $q3->fetch_assoc()['total'];
             <p class="text-muted mb-1">Kegiatan Bulan Ini</p>
             <h3 class="fw-bold"><?= $jumlah_kegiatan ?></h3>
           </div>
-          <div class="rounded-circle bg-success bg-opacity-10 p-3">
+          <div class="d-flex align-items-center justify-content-center 
+            rounded-circle bg-success bg-opacity-10"
+            style="width:60px; height:60px;">
             <i class="bi bi-calendar-event-fill text-success fs-2"></i>
           </div>
         </div>
@@ -71,7 +77,9 @@ $jumlah_user = $q3->fetch_assoc()['total'];
             <p class="text-muted mb-1">Total User</p>
             <h3 class="fw-bold"><?= $jumlah_user ?></h3>
           </div>
-          <div class="rounded-circle bg-warning bg-opacity-10 p-3">
+          <div class="d-flex align-items-center justify-content-center
+            rounded-circle bg-warning bg-opacity-10"
+            style="width:60px; height:60px;">
             <i class="bi bi-person-circle text-warning fs-2"></i>
           </div>
         </div>

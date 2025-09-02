@@ -61,56 +61,95 @@ if (isset($_POST['hapus'])) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard Anggota - KKO PAUD Kota Semarang</title>
 
-<div class="container">
-    <!-- Tombol Tambah -->
-    <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS Pagination Danger -->
+  <style>
+    .pagination .page-link {
+        color: #dc3545;
+    }
+    .pagination .page-link:hover {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+    .pagination .page-item.active .page-link {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: #fff;
+    }
+    .pagination .page-item.disabled .page-link {
+        color: #6c757d;
+        background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-danger text-white text-center">
+      <h4>Pengurus KKO PAUD Kota Semarang</h4>
+    </div>
+    <div class="card-body">
+
+      <!-- Tombol Tambah -->
+      <button type="button" class="btn btn-danger mb-3" data-bs-toggle="modal" data-bs-target="#modalTambah">
         <i class="bi bi-plus-lg"></i> Tambah Anggota
-    </button>
+      </button>
 
-    <div class="table-responsive">
-        <table class="table table-hover">
-            <thead class="table-info">
+      <!-- Tabel -->
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-danger">
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Jabatan</th>
+              <th>Pendidikan</th>
+              <th>Foto</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $hlm = (isset($_GET['hlm'])) ? (int) $_GET['hlm'] : 1;
+            $limit = 15;
+            $limit_start = ($hlm - 1) * $limit;
+            $no = $limit_start + 1;
+
+            $sql = "SELECT * FROM pengurus ORDER BY id ASC LIMIT $limit_start, $limit";
+            $hasil = $conn->query($sql);
+
+            while ($row = $hasil->fetch_assoc()) {
+                $id = $row['id'];
+                $fotoPath = 'assets/foto_pengurus/' . $row["foto"];
+                ?>
                 <tr>
-                    <th class="w-5">No</th>
-                    <th class="w-20">Nama</th>
-                    <th class="w-20">Jabatan</th>
-                    <th class="w-35">Pendidikan</th>
-                    <th class="w-10">Foto</th>
-                    <th class="w-10">Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $hlm = (isset($_GET['hlm'])) ? (int) $_GET['hlm'] : 1;
-                $limit = 15;
-                $limit_start = ($hlm - 1) * $limit;
-                $no = $limit_start + 1;
-
-                $sql = "SELECT * FROM pengurus ORDER BY id ASC LIMIT $limit_start, $limit";
-                $hasil = $conn->query($sql);
-
-                while ($row = $hasil->fetch_assoc()) {
-                    $id = $row['id'];
-                    $fotoPath = 'assets/foto_pengurus/' . $row["foto"];
-                    ?>
-                    <tr>
-                        <td class="text-center"><?= $no++ ?></td>
-                        <td><strong><?= $row["nama"] ?></strong></td>
-                        <td><?= $row["jabatan"] ?></td>
-                        <td><?= $row["pendidikan_terakhir"] ?></td>
-                        <td>
-                            <?php if (!empty($row["foto"]) && file_exists($fotoPath)): ?>
-                                <img src="<?= $fotoPath ?>" width="100">
-                            <?php else: ?>
-                                <span class="text-muted">-</span>
-                            <?php endif; ?>
-                        </td>
-                        <td>
-                            <a href="#" title="edit" class="badge rounded-pill text-bg-success" data-bs-toggle="modal"
+                  <td><?= $no++ ?></td>
+                  <td><strong><?= $row["nama"] ?></strong></td>
+                  <td><?= $row["jabatan"] ?></td>
+                  <td><?= $row["pendidikan_terakhir"] ?></td>
+                  <td>
+                    <?php if (!empty($row["foto"]) && file_exists($fotoPath)): ?>
+                      <img src="<?= $fotoPath ?>" width="80">
+                    <?php else: ?>
+                      <span class="text-muted">-</span>
+                    <?php endif; ?>
+                  </td>
+                  <td>
+                            <a href="#" title="edit" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
                                 data-bs-target="#modalEdit<?= $id ?>"><i class="bi bi-pencil"></i></a>
-                            <a href="#" title="delete" class="badge rounded-pill text-bg-danger" data-bs-toggle="modal"
-                                data-bs-target="#modalHapus<?= $id ?>"><i class="bi bi-x-circle"></i></a>
+                            <a href="#" title="delete" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#modalHapus<?= $id ?>"><i class="bi bi-trash"></i></a>
 
                             <!-- Modal Edit -->
                             <div class="modal fade" id="modalEdit<?= $id ?>" data-bs-backdrop="static" tabindex="-1">
@@ -150,7 +189,7 @@ if (isset($_POST['hapus'])) {
                                             </div>
                                             <div class="modal-footer">
                                                 <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                                <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                                                <input type="submit" name="simpan" value="Simpan" class="btn btn-danger">
                                             </div>
                                         </div>
                                     </form>
@@ -216,7 +255,7 @@ if (isset($_POST['hapus'])) {
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
+                        <input type="submit" name="simpan" value="Simpan" class="btn btn-danger">
                     </div>
                 </div>
             </form>
