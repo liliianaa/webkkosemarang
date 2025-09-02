@@ -373,13 +373,67 @@ include "koneksi.php";
     </div>
 </section>
 
+<!-- MARS KKO PAUD -->
+<section id="mars-kko" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-primary">🎵 Mars KKO PAUD</h2>
+    <p class="text-secondary mb-4">
+      Dengarkan lagu kebanggaan kami dan ikuti liriknya.
+    </p>
 
+    <!-- Audio Player -->
+    <div class="d-flex justify-content-center mb-4">
+      <audio controls class="shadow rounded w-100" style="max-width: 480px;">
+        <source src="assets/mars_kko/mars_kkopaudkotasemarang.mp3" type="audio/mp3">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
+    </div>
+
+    <!<!-- Lirik Lagu -->
+    <div class="card shadow-sm border-0 mx-auto" style="max-width: 720px;">
+    <div class="card-body text-start">
+        <h5 class="fw-bold text-primary mb-3">📜 Lirik Mars KKO PAUD</h5>
+        
+        <p class="text-muted mb-2">
+        KKO PAUD Kota Semarang <br>
+        Sebagai mitra dalam berkarya <br>
+        Berkomitmen tingkatkan profesionalisme <br>
+        Sumber daya manusia
+        </p>
+
+        <p class="text-muted mb-2">
+        Membangun insan yang bekerja sama <br>
+        Hadapi perkembangan dunia <br>
+        Berbasis informasi cepat tepat akurat <br>
+        Serta dapat dipercaya
+        </p>
+
+        <p class="text-muted mb-2">
+        Bekerja berkualitas jujur solid dan amanah <br>
+        Mengelola masa depan bangsa <br>
+        Untuk mewujudkan tujuan kita bersama
+        </p>
+
+        <p class="fw-semibold text-success">
+        Berprestasi untuk semua! <br>
+        KKO Maju, Indonesia Jaya!
+        </p>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
 <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center text-center text-md-start">
+
             <!-- Logo & Deskripsi -->
-            <div class="col-md-3 mb-4">
-                <div class="d-flex align-items-center mb-2">
+            <div class="col-md-3 mb-4 mx-md-3">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
                     <div class="bg-danger text-white rounded-circle p-2 me-2 d-flex justify-content-center align-items-center"
                         style="width: 40px; height: 40px;">
                         <i class="bi bi-book"></i>
@@ -389,52 +443,42 @@ include "koneksi.php";
                         <small class="text-white-50">Kota Semarang</small>
                     </div>
                 </div>
-                <p class="text-white-50 small">
+                <p class="text-white-50 small mb-0">
                     Kolaborasi profesional untuk kemajuan PAUD di Kota Semarang
                 </p>
             </div>
 
             <!-- Halaman -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4 mx-md-3">
                 <h6 class="fw-bold mb-3">Halaman</h6>
                 <ul class="list-unstyled">
+                    <li><a href="index.php" class="text-white-50 text-decoration-none">Beranda</a></li>
                     <li><a href="anggota.php" class="text-white-50 text-decoration-none">Anggota</a></li>
                     <li><a href="kegiatan.php" class="text-white-50 text-decoration-none">Kegiatan</a></li>
-                    <li><a href="legalitas.php" class="text-white-50 text-decoration-none">Legalitas</a></li>
+                    <li><a href="galeri.php" class="text-white-50 text-decoration-none">Galeri</a></li>
                     <li><a href="kontak.php" class="text-white-50 text-decoration-none">Kontak</a></li>
                 </ul>
             </div>
 
-            <!-- Layanan -->
-            <div class="col-md-3 mb-4">
-                <h6 class="fw-bold mb-3">Layanan</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Konsultasi PAUD</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Sertifikasi</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Konten Edukatif</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Platform Digital</a></li>
-                </ul>
-            </div>
-
             <!-- Kontak -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4 mx-md-3">
                 <h6 class="fw-bold mb-3">Kontak</h6>
                 <p class="mb-1 text-white-50">Email: kkopaudkotasemarang@gmail.com</p>
-                <p class="mb-1 text-white-50">Telepon: 0816661087/08976622262</p>
-                <p class="mb-0 text-white-50">Alamat: Jl. Graha Mukti Utama No. 344b Tlogomulyo, Pedurungan, Kota
-                    Semarang</p>
+                <p class="mb-1 text-white-50">Telepon: 0816661087 / 08976622262</p>
+                <p class="mb-0 text-white-50">Alamat: Jl. Graha Mukti Utama No. 344b<br>Tlogomulyo, Pedurungan, Kota
+                    Semarang
+                </p>
             </div>
+
         </div>
 
         <hr class="border-secondary">
 
-        <!-- Copyright -->
         <div class="text-center small text-white-50">
             © 2025 KKO PAUD Kota Semarang. Semua hak dilindungi.
         </div>
     </div>
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -51,6 +51,11 @@ if (!isset($_SESSION['username'])) {
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?= (isset($_GET['page']) && $_GET['page']=="galeri_data") ? 'active fw-semibold text-danger' : '' ?>" href="admin.php?page=galeri_data">
+                        <i class="bi bi-images"></i> Galeri
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?= (isset($_GET['page']) && $_GET['page']=="user") ? 'active fw-semibold text-danger' : '' ?>" href="admin.php?page=user">
                         <i class="bi bi-person-circle"></i> User
                     </a>
@@ -87,9 +92,9 @@ if (!isset($_SESSION['username'])) {
 <!-- Footer -->
 <footer class="text-center p-3 border-top small bg-dark text-white mt-auto">
     <div>
-        <a href="https://www.instagram.com/udinusofficial"><i class="bi bi-instagram h5 p-2 text-white"></i></a>
-        <a href="https://twitter.com/udinusofficial"><i class="bi bi-twitter h5 p-2 text-white"></i></a>
-        <a href="https://wa.me/+6281226403786"><i class="bi bi-whatsapp h5 p-2 text-white"></i></a>
+        <a href="https://instagram.com/kkopaudkotasemarang"><i class="bi bi-instagram h5 p-2 text-white"></i></a>
+        <a href="https://www.youtube.com/@kkopaudkotasemarang242"><i class="bi bi-youtube h5 p-2 text-white"></i></a>
+        <a href="https://wa.me/+62816661087"><i class="bi bi-whatsapp h5 p-2 text-white"></i></a>
     </div>
     <div>KKO PAUD Semarang &copy; 2025</div>
 </footer>

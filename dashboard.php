@@ -11,6 +11,10 @@ $jumlah_pendaftar = $q4->fetch_assoc()['total'];
 $q2 = $conn->query("SELECT COUNT(*) as total FROM kegiatan WHERE MONTH(tanggal)=MONTH(CURRENT_DATE())");
 $jumlah_kegiatan = $q2->fetch_assoc()['total'];
 
+// jumlah galeri
+$q3 = $conn->query("SELECT COUNT(*) as total FROM galeri");
+$jumlah_galeri = $q3->fetch_assoc()['total'];
+
 // jumlah user
 $q3 = $conn->query("SELECT COUNT(*) as total FROM user");
 $jumlah_user = $q3->fetch_assoc()['total'];
@@ -74,6 +78,22 @@ $jumlah_user = $q3->fetch_assoc()['total'];
       <div class="card shadow-sm border-0">
         <div class="card-body d-flex justify-content-between align-items-center">
           <div>
+            <p class="text-muted mb-1">Total Galeri</p>
+            <h3 class="fw-bold"><?= $jumlah_galeri ?></h3>
+          </div>
+          <div class="d-flex align-items-center justify-content-center
+            rounded-circle bg-warning bg-opacity-10"
+            style="width:60px; height:60px;">
+            <i class="bi bi-person-circle text-warning fs-2"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div>
             <p class="text-muted mb-1">Total User</p>
             <h3 class="fw-bold"><?= $jumlah_user ?></h3>
           </div>
@@ -101,6 +121,9 @@ $jumlah_user = $q3->fetch_assoc()['total'];
         </a>
         <a href="admin.php?page=kegiatan_data" class="list-group-item list-group-item-action">
           <i class="bi bi-calendar-event text-danger me-2"></i> Kelola Kegiatan
+        </a>
+        <a href="admin.php?page=galeri_data" class="list-group-item list-group-item-action">
+          <i class="bi bi-images text-danger me-2"></i> Kelola Galeri
         </a>
         <a href="admin.php?page=user" class="list-group-item list-group-item-action">
           <i class="bi bi-person-circle text-danger me-2"></i> Kelola User

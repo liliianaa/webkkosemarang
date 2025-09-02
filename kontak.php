@@ -287,17 +287,6 @@
             </p>
             <div class="row justify-content-center g-3">
 
-                <!-- Facebook -->
-                <div class="col-6 col-md-3">
-                    <a href="https://facebook.com/kkopaudsemarang" target="_blank"
-                        class="text-decoration-none text-dark">
-                        <div class="border rounded-4 py-3 h-100">
-                            <i class="bi bi-facebook text-primary fs-4"></i>
-                            <p class="fw-semibold mt-2 mb-0">Facebook</p>
-                        </div>
-                    </a>
-                </div>
-
                 <!-- Instagram -->
                 <div class="col-6 col-md-3">
                     <a href="https://instagram.com/kkopaudkotasemarang" target="_blank"
@@ -347,8 +336,7 @@
 
                 <!-- Daftar Program -->
                 <div class="col-md-5">
-                    <a href="#" class="text-white text-decoration-none" data-bs-toggle="modal"
-                        data-bs-target="#daftarModal">
+                    <a href="formpendaftaran.php" class="text-white text-decoration-none">
                         <div class="bg-success rounded-4 p-3 text-start h-100">
                             <i class="bi bi-person-lines-fill fs-5"></i>
                             <h6 class="fw-bold mt-2 mb-1">Daftar Program Pelatihan</h6>
@@ -360,10 +348,10 @@
 
                 <!-- Jadwal Kegiatan -->
                 <div class="col-md-5">
-                    <a href="#" class="text-dark text-decoration-none">
+                    <a href="assets/dokumen/kalender_kegiatan_2025.pdf" target="_blank" class="text-dark text-decoration-none">
                         <div class="border rounded-4 p-3 text-start h-100">
                             <i class="bi bi-calendar-event text-success fs-5"></i>
-                            <h6 class="fw-bold mt-2 mb-1">Lihat Jadwal Kegiatan</h6>
+                            <h6 class="fw-bold mt-2 mb-1">Kalender KKO PAUD kOTA SEMARANG</h6>
                             <p class="mb-0 small">Ikuti kegiatan terbaru kami</p>
                         </div>
                     </a>
@@ -373,44 +361,14 @@
     </div>
 </section>
 
-<!-- Modal Form Pendaftaran -->
-<div class="modal fade" id="daftarModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-4">
-            <form action="kirim_email.php" method="POST">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">Form Pendaftaran Pelatihan</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label class="form-label">Nama Lengkap</label>
-                        <input type="text" name="nama" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Email Aktif</label>
-                        <input type="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Institusi</label>
-                        <input type="text" name="institusi" class="form-control" required>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-success">Kirim</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
+<!-- FOOTER -->
 <footer class="bg-dark text-white pt-5 pb-3">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center text-center text-md-start">
+
             <!-- Logo & Deskripsi -->
-            <div class="col-md-3 mb-4">
-                <div class="d-flex align-items-center mb-2">
+            <div class="col-md-3 mb-4 mx-md-3">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
                     <div class="bg-danger text-white rounded-circle p-2 me-2 d-flex justify-content-center align-items-center"
                         style="width: 40px; height: 40px;">
                         <i class="bi bi-book"></i>
@@ -420,46 +378,37 @@
                         <small class="text-white-50">Kota Semarang</small>
                     </div>
                 </div>
-                <p class="text-white-50 small">
+                <p class="text-white-50 small mb-0">
                     Kolaborasi profesional untuk kemajuan PAUD di Kota Semarang
                 </p>
             </div>
 
             <!-- Halaman -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4 mx-md-3">
                 <h6 class="fw-bold mb-3">Halaman</h6>
                 <ul class="list-unstyled">
                     <li><a href="index.php" class="text-white-50 text-decoration-none">Beranda</a></li>
                     <li><a href="anggota.php" class="text-white-50 text-decoration-none">Anggota</a></li>
                     <li><a href="kegiatan.php" class="text-white-50 text-decoration-none">Kegiatan</a></li>
-                    <li><a href="legalitas.php" class="text-white-50 text-decoration-none">Legalitas</a></li>
-                </ul>
-            </div>
-
-            <!-- Layanan -->
-            <div class="col-md-3 mb-4">
-                <h6 class="fw-bold mb-3">Layanan</h6>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50 text-decoration-none">Konsultasi PAUD</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Sertifikasi</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Konten Edukatif</a></li>
-                    <li><a href="#" class="text-white-50 text-decoration-none">Platform Digital</a></li>
+                    <li><a href="galeri.php" class="text-white-50 text-decoration-none">Galeri</a></li>
+                    <li><a href="kontak.php" class="text-white-50 text-decoration-none">Kontak</a></li>
                 </ul>
             </div>
 
             <!-- Kontak -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4 mx-md-3">
                 <h6 class="fw-bold mb-3">Kontak</h6>
                 <p class="mb-1 text-white-50">Email: kkopaudkotasemarang@gmail.com</p>
-                <p class="mb-1 text-white-50">Telepon: 0816661087/08976622262</p>
-                <p class="mb-0 text-white-50">Alamat: Jl. Graha Mukti Utama No. 344b Tlogomulyo, Pedurungan, Kota
-                    Semarang</p>
+                <p class="mb-1 text-white-50">Telepon: 0816661087 / 08976622262</p>
+                <p class="mb-0 text-white-50">Alamat: Jl. Graha Mukti Utama No. 344b<br>Tlogomulyo, Pedurungan, Kota
+                    Semarang
+                </p>
             </div>
+
         </div>
 
         <hr class="border-secondary">
 
-        <!-- Copyright -->
         <div class="text-center small text-white-50">
             © 2025 KKO PAUD Kota Semarang. Semua hak dilindungi.
         </div>
