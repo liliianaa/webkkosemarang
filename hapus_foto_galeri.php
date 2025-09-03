@@ -27,7 +27,7 @@ if (isset($_GET['id']) && isset($_GET['foto'])) {
         }
 
         $fotoBaru = implode(",", $newFotoList);
-        $update = $conn->prepare("UPDATE geleri SET foto=? WHERE id=?");
+        $update = $conn->prepare("UPDATE galeri SET foto=? WHERE id=?");
         $update->bind_param("si", $fotoBaru, $id);
         $update->execute();
     }
