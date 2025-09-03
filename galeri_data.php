@@ -219,7 +219,7 @@ if (isset($_POST['hapus'])) {
                                                 <div class="mb-3">
                                                     <label>Tambah Foto Baru</label>
                                                     <input type="file" name="foto[]" class="form-control" multiple>
-                                                    <small class="text-muted">Bisa pilih lebih dari 1 foto</small>
+                                                        <small class="text-muted">Bisa pilih banyak foto sekaligus</small>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -275,8 +275,9 @@ if (isset($_POST['hapus'])) {
                         <div class="mb-3"><label>Tanggal</label><input type="datetime-local" name="tanggal" class="form-control" required></div>
                         <div class="mb-3">
                             <label>Foto</label>
+                            <input type="file" name="foto[]" id="fotoInput" class="form-control" multiple>
                             <input type="file" name="foto[]" class="form-control" multiple>
-                            <small class="text-muted">Bisa pilih lebih dari 1 foto</small>
+                            <small class="text-muted">Bisa pilih banyak foto sekaligus</small>
                         </div>
 
                     </div>

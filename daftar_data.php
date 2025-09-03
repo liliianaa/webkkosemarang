@@ -9,21 +9,31 @@ if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// proses update status
+// ==== UPDATE STATUS ====
 if (isset($_GET['update_id']) && isset($_GET['status'])) {
     $id = intval($_GET['update_id']);
     $status = $_GET['status'];
 
     $sql = "UPDATE anggota SET status='$status' WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
-        header("Location: daftar_data.php");
+        header("Location: admin.php?page=daftar_data");
         exit;
     } else {
         echo "Error: " . $conn->error;
     }
 }
 
-// filter status
+// ==== HAPUS ====
+if (isset($_POST['hapus'])) {
+    $id = intval($_POST['id']);
+    $stmt = $conn->prepare("DELETE FROM anggota WHERE id=?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+
+    echo "<script>alert('Data berhasil dihapus');window.location='admin.php?page=daftar_data';</script>";
+}
+
+// ==== FILTER STATUS ====
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'Semua';
 if ($filter == 'Semua') {
     $sql = "SELECT * FROM anggota ORDER BY id ASC";
@@ -47,7 +57,7 @@ $result = $conn->query($sql);
     }
     function applyFilter() {
         let filter = document.getElementById("filter").value;
-        window.location.href = "daftar_data.php?filter=" + filter;
+        window.location.href = "admin.php?page=daftar_data&filter=" + filter;
     }
   </script>
 </head>
@@ -71,6 +81,7 @@ $result = $conn->query($sql);
         </select>
       </div>
 
+      <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead class="table-danger">
           <tr>
@@ -91,6 +102,7 @@ $result = $conn->query($sql);
           <?php
           $no = 1;
           while ($row = $result->fetch_assoc()) {
+              $id = $row['id'];
               echo "<tr>
                     <td>".$no++."</td>
                     <td>".$row['nama']."</td>
@@ -112,17 +124,43 @@ $result = $conn->query($sql);
                                     class='btn btn-outline-danger btn-sm' title='Tolak'>
                                 <i class='bi bi-x-circle'></i>
                             </button>
+                            <button class='btn btn-outline-primary btn-sm' data-bs-toggle='modal' data-bs-target='#modalHapus$id' title='Hapus'>
+                                <i class='bi bi-trash'></i>
+                            </button>
+                        </div>
+
+                        <!-- Modal Hapus -->
+                        <div class='modal fade' id='modalHapus$id' data-bs-backdrop='static' tabindex='-1'>
+                          <div class='modal-dialog'>
+                            <form method='post'>
+                              <div class='modal-content'>
+                                <div class='modal-header'>
+                                  <h5 class='modal-title'>Konfirmasi Hapus</h5>
+                                  <button type='button' class='btn-close' data-bs-dismiss='modal'></button>
+                                </div>
+                                <div class='modal-body'>
+                                  <input type='hidden' name='id' value='$id'>
+                                  Yakin ingin menghapus <strong>".$row['nama']."</strong>?
+                                </div>
+                                <div class='modal-footer'>
+                                  <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Batal</button>
+                                  <input type='submit' name='hapus' value='Hapus' class='btn btn-danger'>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
                         </div>
                     </td>
                   </tr>";
-
           }
           ?>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
