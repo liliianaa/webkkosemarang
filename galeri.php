@@ -168,17 +168,31 @@ include "koneksi.php";
     </nav>
 
     <!-- HERO -->
-    <section id="hero" class="text-center">
-        <div class="circle"></div>
-        <div class="container position-relative" style="z-index:1;">
-            <span class="tagline">Dokumentasi Kegiatan</span>
-            <h1 class="hero-title">Galeri Kegiatan</h1>
-            <h1 class="hero-subtitle">KKO PAUD Kota Semarang</h1>
-            <p class="hero-desc">
-                Dokumentasi berbagai kegiatan yang telah diselenggarakan oleh KKO PAUD Kota Semarang
-            </p>
+    <section id="hero" class="py-5" style="background: linear-gradient(180deg, #fde8e9 0%, #fff 100%);">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Kiri: Teks -->
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="tagline d-inline-block mb-2">Dokumentasi Kegiatan</span>
+                    <h1 class="hero-title">Galeri Kegiatan</h1>
+                    <h1 class="hero-subtitle">KKO PAUD Kota Semarang</h1>
+                    <p class="hero-desc mt-3">
+                        Dokumentasi berbagai kegiatan yang telah diselenggarakan oleh KKO PAUD Kota Semarang
+                    </p>
+                    <a href="#galeri-section" class="btn btn-join mt-3">Lihat Galeri</a>
+                </div>
+
+                <!-- Kanan: Gambar -->
+                <div class="col-md-6 text-center mt-4 mt-md-0">
+                    <img src="assets/img/gambar5.png" alt="Ilustrasi Guru dan Anak-anak" class="img-fluid"
+                        style="max-width: 500px;">
+                </div>
+
+            </div>
         </div>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
@@ -186,68 +200,69 @@ include "koneksi.php";
 </html>
 
 <!-- GALERI -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-3">Galeri Kegiatan</h2>
-    <p class="text-center text-muted mb-4">Pilih kegiatan untuk melihat dokumentasinya</p>
+<section id="galeri-section" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-3">Galeri Kegiatan</h2>
+        <p class="text-center text-muted mb-4">Pilih kegiatan untuk melihat dokumentasinya</p>
 
-    <!-- Dropdown Filter -->
-    <form method="GET" class="text-center mb-5">
-      <select name="judul" class="form-select w-auto d-inline-block" onchange="this.form.submit()">
-        <option value="">-- Semua Kegiatan --</option>
-        <?php
-        $sqlJudul = "SELECT DISTINCT judul FROM galeri ORDER BY judul";
-        $resultJudul = $conn->query($sqlJudul);
-        while ($row = $resultJudul->fetch_assoc()) {
-          $selected = (isset($_GET['judul']) && $_GET['judul'] == $row['judul']) ? 'selected' : '';
-          echo '<option value="' . htmlspecialchars($row['judul']) . '" ' . $selected . '>' . htmlspecialchars($row['judul']) . '</option>';
-        }
-        ?>
-      </select>
-    </form>
+        <!-- Dropdown Filter -->
+        <form method="GET" class="text-center mb-5">
+            <select name="judul" class="form-select w-auto d-inline-block" onchange="this.form.submit()">
+                <option value="">-- Semua Kegiatan --</option>
+                <?php
+                $sqlJudul = "SELECT DISTINCT judul FROM galeri ORDER BY judul";
+                $resultJudul = $conn->query($sqlJudul);
+                while ($row = $resultJudul->fetch_assoc()) {
+                    $selected = (isset($_GET['judul']) && $_GET['judul'] == $row['judul']) ? 'selected' : '';
+                    echo '<option value="' . htmlspecialchars($row['judul']) . '" ' . $selected . '>' . htmlspecialchars($row['judul']) . '</option>';
+                }
+                ?>
+            </select>
+        </form>
 
-    <div class="row g-4">
-      <?php
-      // Ambil parameter judul
-      $filterJudul = isset($_GET['judul']) ? $_GET['judul'] : null;
+        <div class="row g-4">
+            <?php
+            // Ambil parameter judul
+            $filterJudul = isset($_GET['judul']) ? $_GET['judul'] : null;
 
-      // Query berdasarkan filter judul
-      $sqlGaleri = "SELECT * FROM galeri";
-      if ($filterJudul) {
-        $judulSafe = $conn->real_escape_string($filterJudul);
-        $sqlGaleri .= " WHERE judul = '$judulSafe'";
-      }
-
-      $resultGaleri = $conn->query($sqlGaleri);
-
-      if ($resultGaleri->num_rows > 0) {
-        while ($row = $resultGaleri->fetch_assoc()) {
-          $judul = $row['judul'];
-          $fotoList = explode(',', $row['foto']);
-
-          foreach ($fotoList as $foto) {
-            $foto = trim($foto);
-            $path = "assets/galeri/" . $foto;
-            if (!empty($foto) && file_exists($path)) {
-              ?>
-              <div class="col-md-4 col-sm-6">
-                <div class="card h-100 shadow-sm border-0 rounded-4">
-                  <img src="<?= $path ?>" class="card-img-top rounded-top-4" style="height: 200px; object-fit: cover;" alt="Galeri <?= htmlspecialchars($judul) ?>">
-                  <div class="card-body text-center">
-                    <h6 class="mb-0 fw-semibold"><?= htmlspecialchars($judul) ?></h6>
-                  </div>
-                </div>
-              </div>
-              <?php
+            // Query berdasarkan filter judul
+            $sqlGaleri = "SELECT * FROM galeri";
+            if ($filterJudul) {
+                $judulSafe = $conn->real_escape_string($filterJudul);
+                $sqlGaleri .= " WHERE judul = '$judulSafe'";
             }
-          }
-        }
-      } else {
-        echo '<p class="text-center text-muted">Belum ada foto untuk kegiatan ini.</p>';
-      }
-      ?>
+
+            $resultGaleri = $conn->query($sqlGaleri);
+
+            if ($resultGaleri->num_rows > 0) {
+                while ($row = $resultGaleri->fetch_assoc()) {
+                    $judul = $row['judul'];
+                    $fotoList = explode(',', $row['foto']);
+
+                    foreach ($fotoList as $foto) {
+                        $foto = trim($foto);
+                        $path = "assets/galeri/" . $foto;
+                        if (!empty($foto) && file_exists($path)) {
+                            ?>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="card h-100 shadow-sm border-0 rounded-4">
+                                    <img src="<?= $path ?>" class="card-img-top rounded-top-4" style="height: 200px; object-fit: cover;"
+                                        alt="Galeri <?= htmlspecialchars($judul) ?>">
+                                    <div class="card-body text-center">
+                                        <h6 class="mb-0 fw-semibold"><?= htmlspecialchars($judul) ?></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                }
+            } else {
+                echo '<p class="text-center text-muted">Belum ada foto untuk kegiatan ini.</p>';
+            }
+            ?>
+        </div>
     </div>
-  </div>
 </section>
 
 

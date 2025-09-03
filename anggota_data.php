@@ -9,7 +9,7 @@ $hlm = isset($_GET['hlm']) ? (int) $_GET['hlm'] : 1;
 if (isset($_POST['simpan'])) {
     $nama = $_POST['nama'];
     $jabatan = $_POST['jabatan'];
-    $pendidikan = $_POST['pendidikan_terakhir'];
+    $pendidikan = $_POST['pendi[hiidikan_terakhir'];
     $foto = '';
     $fotoFolder = 'assets/foto_pengurus/';
     $namaFile = $_FILES['foto']['name'];

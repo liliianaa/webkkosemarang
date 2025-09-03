@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KKO PAUD Kota Semarang</title>
-    <link rel="icon" href="assets/img/logo.jpg"/>
+    <link rel="icon" href="assets/img/logo.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <style>
@@ -147,8 +147,8 @@
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-danger d-flex align-items-center" href="#">
-        <img src="assets/img/logo.jpg" alt="Logo" width="35" height="35" class="me-2 rounded-circle">
-          KKO PAUD Kota Semarang</a>
+                <img src="assets/img/logo.jpg" alt="Logo" width="35" height="35" class="me-2 rounded-circle">
+                KKO PAUD Kota Semarang</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -334,12 +334,12 @@
             </p>
             <div class="row justify-content-center g-3">
 
-                <!-- Daftar Program -->
+                <!-- Daftar Anggota -->
                 <div class="col-md-5">
                     <a href="formpendaftaran.php" class="text-white text-decoration-none">
                         <div class="bg-success rounded-4 p-3 text-start h-100">
                             <i class="bi bi-person-lines-fill fs-5"></i>
-                            <h6 class="fw-bold mt-2 mb-1">Daftar Program Pelatihan</h6>
+                            <h6 class="fw-bold mt-2 mb-1">Daftar Menjadi Anggota KKO</h6>
                             <p class="mb-0 small">Tingkatkan kompetensi Anda</p>
                         </div>
                     </a>
@@ -348,7 +348,8 @@
 
                 <!-- Jadwal Kegiatan -->
                 <div class="col-md-5">
-                    <a href="assets/dokumen/kalender_kegiatan_2025.pdf" target="_blank" class="text-dark text-decoration-none">
+                    <a href="assets/dokumen/kalender_kegiatan_2025.pdf" target="_blank"
+                        class="text-dark text-decoration-none">
                         <div class="border rounded-4 p-3 text-start h-100">
                             <i class="bi bi-calendar-event text-success fs-5"></i>
                             <h6 class="fw-bold mt-2 mb-1">Kalender KKO PAUD kOTA SEMARANG</h6>

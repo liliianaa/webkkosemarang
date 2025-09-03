@@ -8,7 +8,7 @@ include "koneksi.php";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KKO PAUD Kota Semarang</title>
-    <link rel="icon" href="assets/img/logo.jpg"/>
+    <link rel="icon" href="assets/img/logo.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <style>
@@ -84,7 +84,35 @@ include "koneksi.php";
         }
 
         #hero {
-            height: 100vh;
+            height: 90vh;
+        }
+
+        .sambutan-wrapper {
+            max-height: 390px;
+            /* Sesuaikan dengan tinggi foto agar sama panjang */
+            overflow-y: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .sambutan-wrapper.scrollable {
+            overflow-y: auto;
+        }
+
+        .sambutan-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to bottom, transparent, white);
+            pointer-events: none;
+            display: block;
+        }
+
+        .sambutan-wrapper.scrollable::after {
+            display: none;
         }
     </style>
 </head>
@@ -176,12 +204,83 @@ include "koneksi.php";
             style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)); z-index:1;"></div>
     </section>
 
+    <!-- SAMBUTAN KETUA UMUM -->
+    <section class="py-5" id="sambutan">
+        <div class="container">
+            <h2 class="fw-bold text-center text-danger mb-4">Ketua Umum</h2>
+            <div class="row align-items-start">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                    <img src="assets\img\ketuakko_viveno.jpg" alt="Viveno Susilo" class="img-fluid rounded-4 shadow-sm">
+                    <h5 class="fw-bold mt-3 mb-0">Viveno Susilo</h5>
+                    <small class="text-muted">Ketua Umum KKO PAUD Kota Semarang</small>
+                </div>
+                <div class="col-md-9">
+                    <div id="sambutanText" class="sambutan-wrapper">
+                        <p>Assalamu’alaikum warahmatullahi wabarakatuh,<br>
+                            Salam sejahtera bagi kita semua,<br>
+                            Namo Buddhaya, Om Swastiastu Om, Salam kebajikan.</p>
+
+                        <p>Puji syukur kepada Tuhan Yang Maha Kuasa atas segala rahmat dan berkat-Nya kepada kita semua,
+                            para pengurus dan anggota KKO PAUD, sehingga kita masih dapat berbagi, masih terus bekerja
+                            cerdas demi kemajuan kita bersama.</p>
+
+                        <p>Perkembangan dunia internet sangat pesat dan menjadi salah satu indikator kemajuan teknologi
+                            informasi dan komunikasi di Indonesia. Hal ini terbukti dengan semakin meratanya akses
+                            internet hingga ke pelosok desa. Internet sebagai media informasi super cepat sepertinya
+                            telah menjadi salah satu kebutuhan pokok informasi bagi siapa pun tanpa terkecuali.</p>
+
+                        <p>Segala hal yang berbau teknologi menjadi senjata bagi Revolusi Industri 4.0. Mengapa? Karena
+                            revolusi ini mengasumsikan adanya perubahan cara dari yang tradisional menuju modern.
+                            Singkatnya, segala sesuatu yang kita kerjakan sangat bergantung pada teknologi dan
+                            algoritmanya masing-masing. Semua orang dituntut untuk dapat mahir menggunakan teknologi.
+                        </p>
+
+                        <p>Berkenaan dengan itu, sebagai organisasi yang memberikan perhatian penuh terhadap aspek
+                            peningkatan kompetensi TIK pada setiap kegiatan guru, operator sekolah, dan kepala sekolah,
+                            KKO PAUD meluncurkan website ini guna memenuhi kebutuhan akan informasi yang terkait dengan
+                            Dapodik, NISN, E-Rapor, NUPTK, SIMPKB, dan semua informasi seputar dunia pendidikan, serta
+                            menjadi sarana komunikasi yang efektif di era digital dan internet.</p>
+
+                        <p>Harapan kami, dengan diluncurkannya website ini, KKO PAUD dapat menjadi sumber informasi yang
+                            berkaitan dengan hal-hal di atas. Melalui tim IT yang ada di dalam KKO PAUD, kami akan
+                            berusaha untuk selalu melakukan pembaruan secara berkala sehingga pengguna dan masyarakat
+                            luas dapat melihat perkembangan digitalisasi pendidikan.</p>
+
+                        <p>Dukungan, masukan, dan saran dari pengurus serta anggota KKO PAUD, maupun dari pengunjung
+                            website ini, sangat kami harapkan agar menjadi bahan evaluasi demi memberikan yang terbaik
+                            di masa mendatang.</p>
+
+                        <p class="fw-semibold">Semarang, 12 Maret 2022<br>Ketua Umum<br>Viveno Susilo</p>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <button class="btn btn-outline-danger btn-sm" id="toggleSambutan">Lihat Selengkapnya</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <!-- Tambahkan animate.css untuk animasi -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const sambutanDiv = document.getElementById("sambutanText");
+        const toggleBtn = document.getElementById("toggleSambutan");
+
+        toggleBtn.addEventListener("click", () => {
+            sambutanDiv.classList.toggle("scrollable");
+            toggleBtn.textContent = sambutanDiv.classList.contains("scrollable")
+                ? "Tutup Sambutan"
+                : "Lihat Selengkapnya";
+        });
+    </script>
+
+
 </body>
 
 </html>
@@ -192,12 +291,14 @@ include "koneksi.php";
     <div class="container text-center">
         <h2 class="fw-bold mb-3">Apa itu KKO PAUD?</h2>
         <p class="text-muted mb-5">
-            Komunitas profesional yang berkomitmen untuk memajukan pendidikan anak usia dini di Kota Semarang
+            KKO PAUD Kota Semarang adalah wadah kelompok kerja operator PAUD yang bertugas mendukung pendataan,
+            pelaporan, dan administrasi pendidikan usia dini dengan pemanfaatan teknologi informasi, sekaligus
+            meningkatkan kapasitas dan profesionalisme operator dalam bidang TIK.
         </p>
 
         <div class="row g-4">
             <!-- Visi -->
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
                     <h5 class="fw-bold mb-3 text-center">
                         <i class="bi bi-eye-fill text-danger me-2"></i>Visi Kami
@@ -216,7 +317,7 @@ include "koneksi.php";
             </div>
 
             <!-- Misi -->
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
                     <h5 class="fw-bold mb-3 text-center">
                         <i class="bi bi-bullseye text-danger me-2"></i>Misi Kami
@@ -246,6 +347,37 @@ include "koneksi.php";
                         <li class="d-flex align-items-start">
                             <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
                             <span>Mewujudkan Satu Nusa Satu Bangsa Satu Bahasa dan Satu Data yang Berkualitas</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tujuan -->
+            <div class="col-md-4">
+                <div class="p-4 h-100 shadow-sm rounded-4 border-start border-4 border-danger text-start">
+                    <h5 class="fw-bold mb-3 text-center">
+                        <i class="bi bi-flag-fill text-danger me-2"></i>Tujuan Kami
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Menjembatani antara pihak sekolah dengan instansi yang terkait</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Meningkatkan kinerja operator sekolah dalam bidang administrasi sekolah</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Menyajikan data yang valid serta dapat dipercaya</span>
+                        </li>
+                        <li class="d-flex align-items-start mb-2">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Memperkenalkan keberadaan sekolah</span>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="bi bi-check-circle text-danger me-3 mt-1"></i>
+                            <span>Mempercepat penyajian data sekolah</span>
                         </li>
                     </ul>
                 </div>
@@ -375,53 +507,53 @@ include "koneksi.php";
 
 <!-- MARS KKO PAUD -->
 <section id="mars-kko" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-3 text-primary">🎵 Mars KKO PAUD</h2>
-    <p class="text-secondary mb-4">
-      Dengarkan lagu kebanggaan kami dan ikuti liriknya.
-    </p>
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3 text-primary">🎵 Mars KKO PAUD</h2>
+        <p class="text-secondary mb-4">
+            Dengarkan lagu kebanggaan kami dan ikuti liriknya.
+        </p>
 
-    <!-- Audio Player -->
-    <div class="d-flex justify-content-center mb-4">
-      <audio controls class="shadow rounded w-100" style="max-width: 480px;">
-        <source src="assets/mars_kko/mars_kkopaudkotasemarang.mp3" type="audio/mp3">
-        Browser Anda tidak mendukung pemutar audio.
-      </audio>
+        <!-- Audio Player -->
+        <div class="d-flex justify-content-center mb-4">
+            <audio controls class="shadow rounded w-100" style="max-width: 480px;">
+                <source src="assets/mars_kko/mars_kkopaudkotasemarang.mp3" type="audio/mp3">
+                Browser Anda tidak mendukung pemutar audio.
+            </audio>
+        </div>
+
+        <!<!-- Lirik Lagu -->
+            <div class="card shadow-sm border-0 mx-auto" style="max-width: 720px;">
+                <div class="card-body text-start">
+                    <h5 class="fw-bold text-primary mb-3">📜 Lirik Mars KKO PAUD</h5>
+
+                    <p class="text-muted mb-2">
+                        KKO PAUD Kota Semarang <br>
+                        Sebagai mitra dalam berkarya <br>
+                        Berkomitmen tingkatkan profesionalisme <br>
+                        Sumber daya manusia
+                    </p>
+
+                    <p class="text-muted mb-2">
+                        Membangun insan yang bekerja sama <br>
+                        Hadapi perkembangan dunia <br>
+                        Berbasis informasi cepat tepat akurat <br>
+                        Serta dapat dipercaya
+                    </p>
+
+                    <p class="text-muted mb-2">
+                        Bekerja berkualitas jujur solid dan amanah <br>
+                        Mengelola masa depan bangsa <br>
+                        Untuk mewujudkan tujuan kita bersama
+                    </p>
+
+                    <p class="fw-semibold text-success">
+                        Berprestasi untuk semua! <br>
+                        KKO Maju, Indonesia Jaya!
+                    </p>
+                </div>
+            </div>
+
     </div>
-
-    <!<!-- Lirik Lagu -->
-    <div class="card shadow-sm border-0 mx-auto" style="max-width: 720px;">
-    <div class="card-body text-start">
-        <h5 class="fw-bold text-primary mb-3">📜 Lirik Mars KKO PAUD</h5>
-        
-        <p class="text-muted mb-2">
-        KKO PAUD Kota Semarang <br>
-        Sebagai mitra dalam berkarya <br>
-        Berkomitmen tingkatkan profesionalisme <br>
-        Sumber daya manusia
-        </p>
-
-        <p class="text-muted mb-2">
-        Membangun insan yang bekerja sama <br>
-        Hadapi perkembangan dunia <br>
-        Berbasis informasi cepat tepat akurat <br>
-        Serta dapat dipercaya
-        </p>
-
-        <p class="text-muted mb-2">
-        Bekerja berkualitas jujur solid dan amanah <br>
-        Mengelola masa depan bangsa <br>
-        Untuk mewujudkan tujuan kita bersama
-        </p>
-
-        <p class="fw-semibold text-success">
-        Berprestasi untuk semua! <br>
-        KKO Maju, Indonesia Jaya!
-        </p>
-    </div>
-    </div>
-
-  </div>
 </section>
 
 
