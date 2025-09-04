@@ -9,7 +9,7 @@ $hlm = isset($_GET['hlm']) ? (int) $_GET['hlm'] : 1;
 if (isset($_POST['simpan'])) {
     $nama = $_POST['nama'];
     $jabatan = $_POST['jabatan'];
-    $pendidikan = $_POST['pendi[hiidikan_terakhir'];
+    $pendidikan = $_POST['pendidikan_terakhir'];
     $foto = '';
     $fotoFolder = 'assets/foto_pengurus/';
     $namaFile = $_FILES['foto']['name'];
@@ -126,7 +126,18 @@ if (isset($_POST['hapus'])) {
             $limit_start = ($hlm - 1) * $limit;
             $no = $limit_start + 1;
 
-            $sql = "SELECT * FROM pengurus ORDER BY id ASC LIMIT $limit_start, $limit";
+            $sql = "SELECT * FROM pengurus 
+            ORDER BY CASE
+                WHEN jabatan LIKE 'Pembina%' THEN 1
+                WHEN jabatan LIKE 'Ketua Umum%' THEN 2
+                WHEN jabatan LIKE 'Ketua Harian%' THEN 3
+                WHEN jabatan LIKE 'Sekretaris%' THEN 4
+                WHEN jabatan LIKE 'Bendahara%' THEN 5
+                WHEN jabatan LIKE 'Bidang%' THEN 6
+                WHEN jabatan LIKE 'Anggota%' THEN 7
+                ELSE 99
+            END, id ASC
+            LIMIT $limit_start, $limit";
             $hasil = $conn->query($sql);
 
             while ($row = $hasil->fetch_assoc()) {
